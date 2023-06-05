@@ -1,0 +1,150 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.mycontainer {
+  max-width: 1170px;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+a,
+ul,
+ol {
+  list-style-type: none;
+  text-decoration: none;
+  color: black;
+}
+
+nav {
+  position: fixed;
+  width: 100%;
+}
+nav .mycontainer .pod {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+nav .mycontainer ul {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+nav .mycontainer ul .remove {
+  display: none;
+}
+nav .mycontainer .icons {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+nav .mycontainer .icons .Search .myinput {
+  display: none;
+}
+nav .mycontainer .icons .Search .myinput .position {
+  position: relative;
+}
+nav .mycontainer .icons .Search .activinput {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.514);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 700px;
+}
+nav .mycontainer .icons .Search .activinput i {
+  position: absolute;
+  color: white;
+  top: 15px;
+  left: 13px;
+}
+nav .mycontainer .icons .Search .activinput input {
+  padding: 15px 40px;
+  background-color: black;
+  color: white;
+  border-radius: 20px;
+  border: none;
+}
+nav .mycontainer .icons .Search .activinput button {
+  position: absolute;
+  right: -10%;
+  top: 10px;
+  background: none;
+  border: 0;
+  color: white;
+  font-size: 24px;
+  transition: 0.2s;
+}
+nav .mycontainer .icons .Search .activinput button:hover {
+  transform: rotateZ(-90deg);
+}
+nav .mycontainer .bars {
+  display: none;
+}
+@media screen and (max-width: 900px) {
+  nav .mycontainer {
+    position: relative;
+  }
+  nav .mycontainer ul {
+    opacity: 0;
+    width: 0;
+  }
+  nav .mycontainer ul li {
+    display: none;
+  }
+  nav .mycontainer .activebar {
+    transition: 0.5s;
+    opacity: 1;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 600px;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.685);
+  }
+  nav .mycontainer .activebar .remove {
+    color: white;
+    display: block;
+    position: absolute;
+    top: 10px;
+    right: 100px;
+    background: none;
+    border: 0;
+    font-size: 24px;
+  }
+  nav .mycontainer .activebar li {
+    display: block;
+    transition: 0.7s;
+    width: 0;
+  }
+  nav .mycontainer .activebar li a {
+    font-size: 24px;
+    transition: 0.9;
+    color: white;
+  }
+  nav .mycontainer .activebar li:hover {
+    background-color: rgba(0, 217, 255, 0.507);
+    width: 100px;
+  }
+  nav .mycontainer .activebar li:hover a {
+    color: rgb(66, 66, 66);
+  }
+  nav .mycontainer .bars {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    font-size: 24px;
+  }
+}
+
+header {
+  height: 5000px;
+}
