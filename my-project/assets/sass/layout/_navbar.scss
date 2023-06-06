@@ -1,7 +1,14 @@
 nav {
-  position: fixed;
   width: 100%;
   .mycontainer {
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+    .mylogo {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
     .pod {
       display: flex;
       justify-content: space-between;
@@ -21,7 +28,7 @@ nav {
       display: flex;
       gap: 10px;
       align-items: center;
-
+      padding: 0 20px;
       .Search {
         .myinput {
           display: none;
@@ -78,7 +85,15 @@ nav {
   @media screen and (max-width: 900px) {
     .mycontainer {
       position: relative;
+
+      .mylogo {
+        max-width: 100%;
+        img {
+          width: 100%;
+        }
+      }
       ul {
+        position: absolute;
         opacity: 0;
         width: 0;
         li {
@@ -128,8 +143,8 @@ nav {
       .bars {
         display: flex;
         align-items: center;
-        padding: 10px;
-        font-size: 24px;
+        padding: 20px;
+        font-size: 32px;
       }
     }
   }
