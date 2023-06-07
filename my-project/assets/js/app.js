@@ -20,3 +20,15 @@ Searchi.addEventListener("click", function () {
 inputremov.addEventListener("click", function () {
   myinput.classList.remove("activinput");
 });
+
+// mocapi hissesi
+async function myfetch() {
+  const respon = await fetch(`http://localhost:3000/post`);
+  const data = await respon.json();
+
+  data.forEach((element) => {
+    console.log(element);
+  });
+}
+
+myfetch();

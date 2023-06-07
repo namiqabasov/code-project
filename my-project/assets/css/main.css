@@ -58,15 +58,16 @@ nav .mycontainer .icons .Search .myinput .position {
 }
 nav .mycontainer .icons .Search .activinput {
   display: block;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
+  height: 100%;
   background-color: rgba(0, 0, 0, 0.514);
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 700px;
+  z-index: 2;
 }
 nav .mycontainer .icons .Search .activinput i {
   position: absolute;
@@ -111,19 +112,20 @@ nav .mycontainer .bars {
     position: absolute;
     opacity: 0;
     width: 0;
+    transition: 0.5s;
   }
   nav .mycontainer ul li {
     display: none;
   }
   nav .mycontainer .activebar {
-    transition: 0.5s;
+    z-index: 2;
     opacity: 1;
     display: block;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    height: 600px;
+    height: 100%;
     padding: 10px;
     background-color: rgba(0, 0, 0, 0.685);
   }
@@ -322,8 +324,15 @@ main .product .mycontainer .recend p {
   text-align: center;
   font-size: 24px;
 }
+main .product .mycontainer .mycards {
+  padding-top: 100px;
+  display: flex;
+  gap: 20px;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
 main .product .mycontainer .mycards .card {
-  width: 200px;
+  width: 300px;
 }
 main .product .mycontainer .mycards .card .img {
   position: relative;
@@ -362,4 +371,4 @@ main .product .mycontainer .mycards .card .img:hover .divbtn {
 }
 main .product .mycontainer .mycards .card .img:hover .divbtn button {
   display: block;
-}
+}/*# sourceMappingURL=main.css.map */
