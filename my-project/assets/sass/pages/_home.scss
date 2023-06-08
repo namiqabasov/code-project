@@ -257,4 +257,43 @@ main {
       }
     }
   }
+
+
+  .Discover {
+    background-image: url(https://a6e8z9v6.stackpathcdn.com/infinite/homepages/emporium/wp-content/uploads/sites/18/2016/06/cta-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: center;
+    background-attachment: scroll;
+    height: 750px;
+
+    .mycontainer {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 10%;
+      height: 100%;
+      text-align: center;
+
+      h2 {
+        font-size: 45px;
+        color: white;
+      }
+
+      button {
+        padding: 15px 30px;
+        background-color: white;
+        color: black;
+        border-radius: 20px;
+        transition: 0.4s;
+        border: 0;
+
+        &:hover {
+          background-color: rgba(93, 40, 40, 0.851);
+          color: white;
+        }
+      }
+    }
+  }
 }

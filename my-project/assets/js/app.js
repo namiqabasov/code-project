@@ -1,12 +1,15 @@
 const myul = document.querySelector(".myul");
 const bars = document.querySelector(".bars");
 const remove = document.querySelector(".remove");
+const hamburger = document.querySelector(".hamburger");
 
 bars.addEventListener("click", function () {
   myul.classList.add("activebar");
+  hamburger.classList.add("is-active");
 });
 remove.addEventListener("click", function () {
   myul.classList.remove("activebar");
+  hamburger.classList.remove("is-active");
 });
 
 //input ucun
