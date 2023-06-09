@@ -12,6 +12,13 @@ remove.addEventListener("click", function () {
   hamburger.classList.remove("is-active");
 });
 
+//animation
+const Discover = document.querySelector(".Discover");
+window.addEventListener("scroll", function () {
+  let scrollPosition = window.scrollY;
+  Discover.style.backgroundPositionX = -scrollPosition + "px";
+});
+
 //input ucun
 
 const Searchi = document.querySelector(".Searchi");

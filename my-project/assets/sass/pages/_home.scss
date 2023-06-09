@@ -261,11 +261,16 @@ main {
 
   .Discover {
     background-image: url(https://a6e8z9v6.stackpathcdn.com/infinite/homepages/emporium/wp-content/uploads/sites/18/2016/06/cta-bg.jpg);
-    background-repeat: no-repeat;
-    background-size: auto;
+    background-repeat: repeat;
     background-position: center;
-    background-attachment: scroll;
+    top: 0;
+    left: 0;
+    background-attachment: fixed;
+    width: 100%;
     height: 750px;
+    background-size: auto;
+    animation: 2s linear infinite;
+    transition: 10s;
 
     .mycontainer {
       display: flex;
@@ -282,7 +287,7 @@ main {
       }
 
       button {
-        padding: 15px 30px;
+        padding: 20px 30px;
         background-color: white;
         color: black;
         border-radius: 20px;
@@ -292,6 +297,222 @@ main {
         &:hover {
           background-color: rgba(93, 40, 40, 0.851);
           color: white;
+        }
+      }
+    }
+  }
+
+  .Fashion {
+    .mycontainer {
+      .myname {
+        h2 {
+          text-align: center;
+          font-size: 32px;
+          padding: 100px 0;
+        }
+      }
+
+      .autoplay {
+        .card {
+          max-width: 300px;
+          height: auto;
+          padding-right: 1%;
+
+          .img {
+            position: relative;
+            transition: 0.4s;
+            overflow: hidden;
+            height: auto;
+
+            img {
+              width: 100%;
+              height: auto;
+            }
+
+            .divbtn {
+              position: absolute;
+              background-color: black;
+              z-index: 2;
+              bottom: -20px;
+              transition: 0.4s;
+              display: flex;
+              width: 100%;
+
+              .see {
+                background-color: black;
+                color: white;
+              }
+
+              .basket {
+                background-color: rgba(255, 0, 0, 0.575);
+                color: black;
+              }
+
+              button {
+                width: 50%;
+                display: none;
+                border: 0;
+              }
+            }
+
+            &:hover {
+              .divbtn {
+                bottom: 0;
+
+                button {
+                  display: block;
+                }
+              }
+            }
+          }
+        }
+
+
+        .slick-next {
+          opacity: 0;
+          cursor: auto;
+        }
+
+        .slick-prev {
+          opacity: 0;
+          cursor: auto;
+        }
+
+        .slick-dots {
+          display: flex;
+          justify-content: center;
+
+
+
+
+          li {
+            padding: 2%;
+
+            button {
+              background-color: rgba(161, 104, 104, 0.774);
+              color: rgba(89, 196, 223, 0);
+              border: 1px solid rgba(134, 113, 96, 0.774);
+              border-radius: 50%;
+              width: 20px;
+              height: 20px;
+              transition: 0.2s;
+
+              &:hover {
+                transform: scale(1.125);
+              }
+            }
+
+          }
+
+          .slick-active {
+            button {
+              background-color: rgb(91, 41, 41);
+              background-color: rgb(91, 41, 41);
+            }
+          }
+
+
+        }
+
+
+      }
+
+
+    }
+  }
+
+
+  .CUSTOMERS {
+    padding: 100px 0;
+
+    .mycontainer {
+      max-width: 1440px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      gap: 1%;
+
+      .word {
+        max-width: 450px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 50px;
+        text-align: center;
+        background-color: rgba(215, 213, 213, 0.545);
+        padding: 150px 20px;
+
+        i {
+          border: 1px solid black;
+          padding: 10px;
+          border-radius: 50%;
+        }
+
+        h2 {
+          font-size: 24px;
+          color: black;
+        }
+
+        p {
+          font-size: 18px;
+          color: rgba(0, 0, 0, 0.425);
+        }
+
+        button {
+          padding: 20px 30px;
+          border-radius: 10px;
+          background-color: white;
+
+          border: 0;
+          transition: 0.3s;
+
+          &:hover {
+            background-color: rgb(222, 209, 209);
+          }
+        }
+      }
+
+      .SHIPPING {
+        max-width: 450px;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 50px;
+        text-align: center;
+        background-color: rgba(145, 34, 34, 0.812);
+        padding: 150px 20px;
+
+        h2 {
+          font-size: 24px;
+          color: white;
+        }
+
+        p {
+          font-size: 18px;
+          color: white;
+        }
+
+        i {
+          font-size: 32px;
+        }
+
+        button {
+          padding: 20px 30px;
+          border-radius: 10px;
+          background-color: white;
+
+          border: 0;
+          background-color: white;
+          transition: 0.3s;
+
+
+
+          &:hover {
+            background-color: rgb(222, 209, 209);
+
+
+          }
         }
       }
     }

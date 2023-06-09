@@ -378,11 +378,16 @@ main .product .mycontainer .mycards .card .img:hover .divbtn button {
 }
 main .Discover {
   background-image: url(https://a6e8z9v6.stackpathcdn.com/infinite/homepages/emporium/wp-content/uploads/sites/18/2016/06/cta-bg.jpg);
-  background-repeat: no-repeat;
-  background-size: auto;
+  background-repeat: repeat;
   background-position: center;
-  background-attachment: scroll;
+  top: 0;
+  left: 0;
+  background-attachment: fixed;
+  width: 100%;
   height: 750px;
+  background-size: auto;
+  animation: 2s linear infinite;
+  transition: 10s;
 }
 main .Discover .mycontainer {
   display: flex;
@@ -398,7 +403,7 @@ main .Discover .mycontainer h2 {
   color: white;
 }
 main .Discover .mycontainer button {
-  padding: 15px 30px;
+  padding: 20px 30px;
   background-color: white;
   color: black;
   border-radius: 20px;
@@ -408,6 +413,231 @@ main .Discover .mycontainer button {
 main .Discover .mycontainer button:hover {
   background-color: rgba(93, 40, 40, 0.851);
   color: white;
+}
+main .Fashion .mycontainer .myname h2 {
+  text-align: center;
+  font-size: 32px;
+  padding: 100px 0;
+}
+main .Fashion .mycontainer .autoplay .card {
+  max-width: 300px;
+  height: auto;
+  padding-right: 1%;
+}
+main .Fashion .mycontainer .autoplay .card .img {
+  position: relative;
+  transition: 0.4s;
+  overflow: hidden;
+  height: auto;
+}
+main .Fashion .mycontainer .autoplay .card .img img {
+  width: 100%;
+  height: auto;
+}
+main .Fashion .mycontainer .autoplay .card .img .divbtn {
+  position: absolute;
+  background-color: black;
+  z-index: 2;
+  bottom: -20px;
+  transition: 0.4s;
+  display: flex;
+  width: 100%;
+}
+main .Fashion .mycontainer .autoplay .card .img .divbtn .see {
+  background-color: black;
+  color: white;
+}
+main .Fashion .mycontainer .autoplay .card .img .divbtn .basket {
+  background-color: rgba(255, 0, 0, 0.575);
+  color: black;
+}
+main .Fashion .mycontainer .autoplay .card .img .divbtn button {
+  width: 50%;
+  display: none;
+  border: 0;
+}
+main .Fashion .mycontainer .autoplay .card .img:hover .divbtn {
+  bottom: 0;
+}
+main .Fashion .mycontainer .autoplay .card .img:hover .divbtn button {
+  display: block;
+}
+main .Fashion .mycontainer .autoplay .slick-next {
+  opacity: 0;
+  cursor: auto;
+}
+main .Fashion .mycontainer .autoplay .slick-prev {
+  opacity: 0;
+  cursor: auto;
+}
+main .Fashion .mycontainer .autoplay .slick-dots {
+  display: flex;
+  justify-content: center;
+}
+main .Fashion .mycontainer .autoplay .slick-dots li {
+  padding: 2%;
+}
+main .Fashion .mycontainer .autoplay .slick-dots li button {
+  background-color: rgba(161, 104, 104, 0.774);
+  color: rgba(89, 196, 223, 0);
+  border: 1px solid rgba(134, 113, 96, 0.774);
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  transition: 0.2s;
+}
+main .Fashion .mycontainer .autoplay .slick-dots li button:hover {
+  transform: scale(1.125);
+}
+main .Fashion .mycontainer .autoplay .slick-dots .slick-active button {
+  background-color: rgb(91, 41, 41);
+  background-color: rgb(91, 41, 41);
+}
+main .CUSTOMERS {
+  padding: 100px 0;
+}
+main .CUSTOMERS .mycontainer {
+  max-width: 1440px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 1%;
+}
+main .CUSTOMERS .mycontainer .word {
+  max-width: 450px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+  text-align: center;
+  background-color: rgba(215, 213, 213, 0.545);
+  padding: 150px 20px;
+}
+main .CUSTOMERS .mycontainer .word i {
+  border: 1px solid black;
+  padding: 10px;
+  border-radius: 50%;
+}
+main .CUSTOMERS .mycontainer .word h2 {
+  font-size: 24px;
+  color: black;
+}
+main .CUSTOMERS .mycontainer .word p {
+  font-size: 18px;
+  color: rgba(0, 0, 0, 0.425);
+}
+main .CUSTOMERS .mycontainer .word button {
+  padding: 20px 30px;
+  border-radius: 10px;
+  background-color: white;
+  border: 0;
+  transition: 0.3s;
+}
+main .CUSTOMERS .mycontainer .word button:hover {
+  background-color: rgb(222, 209, 209);
+}
+main .CUSTOMERS .mycontainer .SHIPPING {
+  max-width: 450px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+  text-align: center;
+  background-color: rgba(145, 34, 34, 0.812);
+  padding: 150px 20px;
+}
+main .CUSTOMERS .mycontainer .SHIPPING h2 {
+  font-size: 24px;
+  color: white;
+}
+main .CUSTOMERS .mycontainer .SHIPPING p {
+  font-size: 18px;
+  color: white;
+}
+main .CUSTOMERS .mycontainer .SHIPPING i {
+  font-size: 32px;
+}
+main .CUSTOMERS .mycontainer .SHIPPING button {
+  padding: 20px 30px;
+  border-radius: 10px;
+  background-color: white;
+  border: 0;
+  background-color: white;
+  transition: 0.3s;
+}
+main .CUSTOMERS .mycontainer .SHIPPING button:hover {
+  background-color: rgb(222, 209, 209);
+}
+
+footer {
+  background-color: rgba(0, 0, 0, 0.849);
+}
+footer .mycontainer {
+  padding: 100px 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+footer .mycontainer div {
+  max-width: 350px;
+}
+footer .mycontainer .about h2 {
+  font-size: 18px;
+  color: white;
+  padding-bottom: 100px;
+}
+footer .mycontainer .about p {
+  font-size: 24px;
+  color: rgba(255, 255, 255, 0.473);
+  font-size: 16px;
+}
+footer .mycontainer .posts {
+  border-left: 1px solid rgba(248, 248, 248, 0.292);
+  border-right: 1px solid rgba(248, 248, 248, 0.292);
+  padding: 0 50px;
+}
+footer .mycontainer .posts h2 {
+  font-size: 18px;
+  color: white;
+  padding-bottom: 20px;
+}
+footer .mycontainer .posts p {
+  padding: 10px 0 20px 0;
+  border-bottom: 1px solid rgba(248, 248, 248, 0.292);
+  font-size: 18px;
+}
+footer .mycontainer .posts p a {
+  color: rgba(255, 255, 255, 0.473);
+}
+footer .mycontainer .tag h2 {
+  font-size: 18px;
+  color: white;
+  padding-bottom: 30px;
+}
+footer .mycontainer .tag button {
+  background: none;
+  border: 1px solid rgba(248, 248, 248, 0.292);
+  padding: 10px 20px;
+  margin: 5px;
+}
+footer .mycontainer .tag button a {
+  color: white;
+}
+footer .RESERVED {
+  background-color: black;
+  padding: 50px 0;
+  text-align: center;
+}
+footer .RESERVED p {
+  color: rgba(255, 255, 255, 0.473);
+  font-size: 18px;
+}
+@media screen and (max-width: 800px) {
+  footer .mycontainer {
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+  }
 }
 
 /*!
