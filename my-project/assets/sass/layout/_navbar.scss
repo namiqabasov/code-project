@@ -1,5 +1,9 @@
 nav {
   width: 100%;
+  z-index: 5;
+  background-color: white;
+  transition: 0.4s;
+  top: -20px;
 
   .mycontainer {
     display: flex;
@@ -54,7 +58,7 @@ nav {
           display: flex;
           align-items: center;
           justify-content: center;
-          z-index: 2;
+          z-index: 4;
 
           i {
             position: absolute;
@@ -94,12 +98,14 @@ nav {
     }
   }
 
+
+
   @media screen and (max-width: 900px) {
     .mycontainer {
       position: relative;
 
       .mylogo {
-        max-width: 100%;
+        max-width: 200px;
 
         img {
           width: 100%;
@@ -168,6 +174,40 @@ nav {
         align-items: center;
         padding: 20px;
         font-size: 32px;
+        max-width: 100px;
+      }
+    }
+  }
+}
+
+.navbox {
+  position: fixed;
+  height: auto;
+
+  top: 0;
+
+
+  .mycontainer {
+    flex-direction: row;
+    justify-content: space-between;
+
+    .pod {
+      column-gap: 100px;
+    }
+  }
+
+}
+
+@media screen and (max-width:455px) {
+  .navbox {
+    .mycontainer {
+      flex-direction: column;
+      align-items: center;
+      gap: 0;
+
+      .pod {
+        flex-wrap: nowrap;
+        gap: 0;
       }
     }
   }

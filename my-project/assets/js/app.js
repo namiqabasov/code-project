@@ -19,6 +19,21 @@ window.addEventListener("scroll", function () {
   Discover.style.backgroundPositionX = -scrollPosition + "px";
 });
 
+// nav position
+
+const navbar = document.querySelector("nav");
+function navscrol() {
+  let myscrol = window.scrollY;
+  if (myscrol < 300) {
+    navbar.classList.remove("navbox");
+  } else {
+    navbar.classList.add("navbox");
+  }
+}
+window.addEventListener("scroll", navscrol);
+
+// nav position
+
 //input ucun
 
 const Searchi = document.querySelector(".Searchi");
@@ -37,8 +52,122 @@ async function myfetch() {
   const data = await respon.json();
 
   data.forEach((element) => {
-    console.log(element);
+    cretElement(element);
   });
+}
+async function myfetch1() {
+  const respon = await fetch(`http://localhost:3000/post`);
+  const data = await respon.json();
+
+  data.forEach((element) => {
+    cretElement1(element);
+  });
+}
+const mycards = document.querySelector(".mycards");
+const autoplay = document.querySelector(".card");
+function cretElement(data) {
+  // createelement
+  const carddiv = document.createElement("div");
+  const imgdiv = document.createElement("div");
+  const shopdiv = document.createElement("div");
+
+  const myimg = document.createElement("img");
+
+  const btndiv = document.createElement("div");
+
+  const btnsee = document.createElement("button");
+  const btnbasget = document.createElement("button");
+  const myp = document.createElement("p");
+  myp.innerText = "";
+  if (data.sale !== "false") {
+    myp.innerText = "SALE!";
+    myp.classList.add("sale");
+  }
+
+  const pdiv = document.createElement("div");
+  const p = document.createElement("p");
+  const h2 = document.createElement("h2");
+
+  // classname
+  carddiv.classList.add("card");
+  imgdiv.classList.add("img");
+  shopdiv.classList.add("shop");
+  btndiv.classList.add("divbtn");
+  btnsee.classList.add("see");
+  btnbasget.classList.add("basket");
+  pdiv.classList.add("ptag");
+
+  // innertext
+
+  myimg.src = data.img_src;
+  btnsee.innerHTML = `<i class="fa-solid fa-eye"></i> View Details`;
+  btnbasget.innerHTML = `<i class="fa-solid fa-cart-shopping"></i>
+Select Options`;
+  p.innerText = data.name;
+  h2.innerText = data.price;
+
+  // append
+  pdiv.append(p, h2);
+  shopdiv.append(myp, pdiv);
+
+  btndiv.append(btnsee, btnbasget);
+  imgdiv.append(myimg, btndiv);
+  carddiv.append(imgdiv, shopdiv);
+  mycards.append(carddiv);
+}
+function cretElement1(data) {
+  // createelement
+  const carddiv = document.createElement("div");
+  const imgdiv = document.createElement("div");
+  const shopdiv = document.createElement("div");
+
+  const myimg = document.createElement("img");
+
+  const btndiv = document.createElement("div");
+
+  const btnsee = document.createElement("button");
+  const btnbasget = document.createElement("button");
+  const myp = document.createElement("p");
+  myp.innerText = "";
+  if (data.sale !== "false") {
+    myp.innerText = "SALE!";
+    myp.classList.add("sale");
+  }
+
+  const pdiv = document.createElement("div");
+  const p = document.createElement("p");
+  const h2 = document.createElement("h2");
+
+  // classname
+  carddiv.classList.add("card");
+  carddiv.classList.add("slick-slide");
+  carddiv.classList.add("slick-cloned");
+  imgdiv.classList.add("img");
+  shopdiv.classList.add("shop");
+  btndiv.classList.add("divbtn");
+  btnsee.classList.add("see");
+  btnbasget.classList.add("basket");
+  pdiv.classList.add("ptag");
+
+  // innertext
+
+  myimg.src = data.img_src;
+  btnsee.innerHTML = `<i class="fa-solid fa-eye"></i> View Details`;
+  btnbasget.innerHTML = `<i class="fa-solid fa-cart-shopping"></i>
+Select Options`;
+  p.innerText = data.name;
+  h2.innerText = data.price;
+
+  // append
+  carddiv.append(imgdiv, shopdiv);
+  pdiv.append(p, h2);
+  shopdiv.append(myp, pdiv);
+
+  btndiv.append(btnsee, btnbasget);
+  imgdiv.append(myimg, btndiv);
+
+  autoplay.append(carddiv);
 }
 
 myfetch();
+myfetch1();

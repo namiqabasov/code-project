@@ -16,6 +16,13 @@ ol {
   list-style-type: none;
   text-decoration: none;
   color: black;
+  font-family: "Work Sans", sans-serif;
+}
+
+h2,
+h3,
+p {
+  font-family: "Work Sans", sans-serif;
 }
 
 button {
@@ -24,6 +31,10 @@ button {
 
 nav {
   width: 100%;
+  z-index: 5;
+  background-color: white;
+  transition: 0.4s;
+  top: -20px;
 }
 nav .mycontainer {
   display: flex;
@@ -71,7 +82,7 @@ nav .mycontainer .icons .Search .activinput {
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 2;
+  z-index: 4;
 }
 nav .mycontainer .icons .Search .activinput i {
   position: absolute;
@@ -107,7 +118,7 @@ nav .mycontainer .bars {
     position: relative;
   }
   nav .mycontainer .mylogo {
-    max-width: 100%;
+    max-width: 200px;
   }
   nav .mycontainer .mylogo img {
     width: 100%;
@@ -165,7 +176,36 @@ nav .mycontainer .bars {
     align-items: center;
     padding: 20px;
     font-size: 32px;
+    max-width: 100px;
   }
+}
+
+.navbox {
+  position: fixed;
+  height: auto;
+  top: 0;
+}
+.navbox .mycontainer {
+  flex-direction: row;
+  justify-content: space-between;
+}
+.navbox .mycontainer .pod {
+  column-gap: 100px;
+}
+
+@media screen and (max-width: 455px) {
+  .navbox .mycontainer {
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+  }
+  .navbox .mycontainer .pod {
+    flex-wrap: nowrap;
+    gap: 0;
+  }
+}
+header {
+  height: 100px;
 }
 
 main {
@@ -347,12 +387,16 @@ main .product .mycontainer .mycards .card .img {
 main .product .mycontainer .mycards .card .img img {
   width: 100%;
   height: 200px;
+  transition: 0.4s;
+}
+main .product .mycontainer .mycards .card .img:hover img {
+  transform: scale(1.2);
 }
 main .product .mycontainer .mycards .card .img .divbtn {
   position: absolute;
   background-color: black;
   z-index: 2;
-  bottom: -20px;
+  bottom: -80px;
   transition: 0.4s;
   display: flex;
   width: 100%;
@@ -367,7 +411,7 @@ main .product .mycontainer .mycards .card .img .divbtn .basket {
 }
 main .product .mycontainer .mycards .card .img .divbtn button {
   width: 50%;
-  display: none;
+  padding: 20px 0;
   border: 0;
 }
 main .product .mycontainer .mycards .card .img:hover .divbtn {
@@ -375,6 +419,35 @@ main .product .mycontainer .mycards .card .img:hover .divbtn {
 }
 main .product .mycontainer .mycards .card .img:hover .divbtn button {
   display: block;
+  padding: 20px 0;
+}
+main .product .mycontainer .mycards .card .shop {
+  display: flex;
+  justify-content: center;
+  padding: 20px 0;
+}
+main .product .mycontainer .mycards .card .shop .sale {
+  display: flex;
+  align-self: center;
+  justify-content: center;
+  padding: 5%;
+  border-radius: 50%;
+  color: white;
+  background-color: rgba(247, 125, 125, 0.755);
+}
+main .product .mycontainer .mycards .card .shop .ptag {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+main .product .mycontainer .mycards .card .shop .ptag p {
+  color: black;
+  font-weight: bold;
+  font-size: 24px;
+}
+main .product .mycontainer .mycards .card .shop .ptag h2 {
+  font-size: 22px;
+  color: rgba(247, 125, 125, 0.755);
 }
 main .Discover {
   background-image: url(https://a6e8z9v6.stackpathcdn.com/infinite/homepages/emporium/wp-content/uploads/sites/18/2016/06/cta-bg.jpg);
@@ -386,7 +459,7 @@ main .Discover {
   width: 100%;
   height: 750px;
   background-size: auto;
-  animation: 2s linear infinite;
+  animation: 5s linear infinite;
   transition: 10s;
 }
 main .Discover .mycontainer {
@@ -414,6 +487,11 @@ main .Discover .mycontainer button:hover {
   background-color: rgba(93, 40, 40, 0.851);
   color: white;
 }
+@media screen and (max-width: 360px) {
+  main .Discover .mycontainer h2 {
+    font-size: 24px;
+  }
+}
 main .Fashion .mycontainer .myname h2 {
   text-align: center;
   font-size: 32px;
@@ -433,12 +511,16 @@ main .Fashion .mycontainer .autoplay .card .img {
 main .Fashion .mycontainer .autoplay .card .img img {
   width: 100%;
   height: auto;
+  transition: 0.4s;
+}
+main .Fashion .mycontainer .autoplay .card .img:hover img {
+  transform: scale(1.2);
 }
 main .Fashion .mycontainer .autoplay .card .img .divbtn {
   position: absolute;
   background-color: black;
   z-index: 2;
-  bottom: -20px;
+  bottom: -80px;
   transition: 0.4s;
   display: flex;
   width: 100%;
@@ -453,7 +535,7 @@ main .Fashion .mycontainer .autoplay .card .img .divbtn .basket {
 }
 main .Fashion .mycontainer .autoplay .card .img .divbtn button {
   width: 50%;
-  display: none;
+  padding: 20px 0;
   border: 0;
 }
 main .Fashion .mycontainer .autoplay .card .img:hover .divbtn {
@@ -461,6 +543,42 @@ main .Fashion .mycontainer .autoplay .card .img:hover .divbtn {
 }
 main .Fashion .mycontainer .autoplay .card .img:hover .divbtn button {
   display: block;
+  padding: 20px 0;
+}
+main .Fashion .mycontainer .autoplay .shop {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px 0;
+}
+main .Fashion .mycontainer .autoplay .shop .sale {
+  display: flex;
+  align-self: center;
+  justify-content: center;
+  padding: 5%;
+  border-radius: 50%;
+  color: white;
+  background-color: rgba(247, 125, 125, 0.755);
+  font-size: 15px;
+}
+main .Fashion .mycontainer .autoplay .shop .ptag {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1%;
+}
+main .Fashion .mycontainer .autoplay .shop .ptag p {
+  color: black;
+  font-weight: bold;
+  font-size: 18px;
+}
+main .Fashion .mycontainer .autoplay .shop .ptag h2 {
+  font-size: 16px;
+  color: rgba(247, 125, 125, 0.755);
+}
+@media screen and (max-width: 768px) {
+  main .Fashion .mycontainer .autoplay .shop .sale {
+    display: none;
+  }
 }
 main .Fashion .mycontainer .autoplay .slick-next {
   opacity: 0;
@@ -576,7 +694,7 @@ footer .mycontainer {
   padding: 100px 0;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 footer .mycontainer div {
   max-width: 350px;
@@ -587,7 +705,6 @@ footer .mycontainer .about h2 {
   padding-bottom: 100px;
 }
 footer .mycontainer .about p {
-  font-size: 24px;
   color: rgba(255, 255, 255, 0.473);
   font-size: 16px;
 }
