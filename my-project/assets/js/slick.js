@@ -8,6 +8,15 @@ $(".fade").slick({
 
   autoplaySpeed: 2000,
 });
+$(".swiper-wrapper").slick({
+  infinite: true,
+  speed: 500,
+  fade: true,
+  cssEase: "linear",
+  autoplay: true,
+
+  autoplaySpeed: 2000,
+});
 
 const slicknext = (document.querySelector(
   ".slick-next"

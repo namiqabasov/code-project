@@ -205,7 +205,8 @@ nav .mycontainer .bars {
   }
 }
 header {
-  height: 100px;
+  height: 200px;
+  background-color: white;
 }
 
 main {
@@ -404,6 +405,12 @@ main .product .mycontainer .mycards .card .img .divbtn {
 main .product .mycontainer .mycards .card .img .divbtn .see {
   background-color: black;
   color: white;
+  width: 50%;
+  padding: 20px 0;
+  border: 0;
+}
+main .product .mycontainer .mycards .card .img .divbtn .see i {
+  margin-left: 10px;
 }
 main .product .mycontainer .mycards .card .img .divbtn .basket {
   background-color: rgba(255, 0, 0, 0.575);
@@ -528,6 +535,13 @@ main .Fashion .mycontainer .autoplay .card .img .divbtn {
 main .Fashion .mycontainer .autoplay .card .img .divbtn .see {
   background-color: black;
   color: white;
+  width: 50%;
+  padding: 20px 0;
+  border: 0;
+  font-size: 12px;
+}
+main .Fashion .mycontainer .autoplay .card .img .divbtn .see i {
+  margin-left: 10px;
 }
 main .Fashion .mycontainer .autoplay .card .img .divbtn .basket {
   background-color: rgba(255, 0, 0, 0.575);
@@ -536,6 +550,7 @@ main .Fashion .mycontainer .autoplay .card .img .divbtn .basket {
 main .Fashion .mycontainer .autoplay .card .img .divbtn button {
   width: 50%;
   padding: 20px 0;
+  font-size: 12px;
   border: 0;
 }
 main .Fashion .mycontainer .autoplay .card .img:hover .divbtn {
@@ -1766,4 +1781,221 @@ footer .RESERVED p {
 .hamburger--vortex-r.is-active .hamburger-inner::after {
   bottom: 0;
   transform: rotate(-90deg);
+}
+
+main .topics .mycontainer .name {
+  padding: 100px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+main .topics .mycontainer .name h2 {
+  font-size: 44px;
+  text-align: center;
+  padding-bottom: 20px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+main .topics .mycontainer .name p {
+  font-size: 20px;
+  text-align: center;
+  color: rgba(0, 0, 0, 0.629);
+  max-width: 600px;
+}
+main .topics .mycontainer .myaddiction {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+main .topics .mycontainer .myaddiction .cards {
+  display: flex;
+  gap: 20px;
+  max-width: 600px;
+  width: 100%;
+  position: relative;
+}
+main .topics .mycontainer .myaddiction .cards img {
+  transition: 0.5s;
+  width: 100%;
+}
+main .topics .mycontainer .myaddiction .cards img:hover {
+  transform: scale(1.1);
+}
+main .topics .mycontainer .myaddiction .cards .time {
+  position: absolute;
+  left: 0;
+  background-color: black;
+  color: white;
+  padding: 20px;
+}
+main .topics .mycontainer .myaddiction .cards .hilton {
+  font-size: 18px;
+  font-weight: bold;
+  padding: 20px 0;
+}
+main .topics .mycontainer .myaddiction .cards .lorem {
+  padding: 20px 0;
+}
+main .topics .mycontainer .myaddiction .cards .icons {
+  display: flex;
+}
+main .topics .mycontainer .myaddiction .cards .icons i {
+  padding-left: 20px;
+  padding-right: 10px;
+}
+main .topics .mycontainer .btn {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 80px 0;
+}
+main .topics .mycontainer .btn button {
+  border: 0;
+  background-color: rgba(2, 137, 199, 0.785);
+  padding: 15px 30px;
+  border-radius: 15px;
+  color: white;
+  transition: 0.1s;
+  border: 1px solid white;
+}
+main .topics .mycontainer .btn button:hover {
+  background-color: white;
+  color: rgba(2, 137, 199, 0.785);
+  border: 1px solid;
+}
+@media screen and (max-width: 900px) {
+  main .topics .mycontainer .myaddiction {
+    grid-template-columns: 1fr;
+  }
+  main .topics .mycontainer .myaddiction .cards {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 768px) {
+  main .topics .mycontainer .myaddiction {
+    grid-template-columns: 1fr;
+  }
+  main .topics .mycontainer .myaddiction .cards {
+    width: 70%;
+  }
+}
+@media screen and (max-width: 468px) {
+  main .topics .mycontainer .myaddiction {
+    grid-template-columns: 1fr;
+  }
+  main .topics .mycontainer .myaddiction .cards {
+    width: 20%;
+  }
+}
+@media screen and (max-width: 368px) {
+  main .topics .mycontainer .myaddiction {
+    grid-template-columns: 1fr;
+  }
+  main .topics .mycontainer .myaddiction .cards {
+    width: 10%;
+    height: auto;
+  }
+}
+
+main .total {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  z-index: 10;
+  bottom: 200px;
+  right: 100px;
+  background-color: rgba(122, 8, 8, 0.477);
+  border-radius: 10px;
+}
+main .Basgetcard {
+  padding-top: 100px;
+  display: flex;
+  gap: 20px;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+main .Basgetcard .card {
+  width: 300px;
+}
+main .Basgetcard .card .imgdiv {
+  overflow: hidden;
+  width: 100%;
+}
+main .Basgetcard .card .imgdiv img {
+  width: 100%;
+  height: 200px;
+  transition: 0.4s;
+}
+main .Basgetcard .card .imgdiv:hover img {
+  transform: scale(1.2);
+}
+main .Basgetcard .card .imgdiv .divbtn {
+  position: absolute;
+  background-color: black;
+  z-index: 2;
+  bottom: -80px;
+  transition: 0.4s;
+  display: flex;
+  width: 100%;
+}
+main .Basgetcard .card .imgdiv .divbtn .see {
+  background-color: black;
+  color: white;
+}
+main .Basgetcard .card .imgdiv .divbtn button {
+  width: 50%;
+  padding: 20px 0;
+  border: 0;
+}
+main .Basgetcard .card .imgdiv:hover .divbtn {
+  bottom: 0;
+}
+main .Basgetcard .card .imgdiv:hover .divbtn button {
+  display: block;
+  padding: 20px 0;
+}
+main .Basgetcard .card .basket_item {
+  display: flex;
+  gap: 10px;
+}
+main .Basgetcard .card .basket_item button {
+  border: 0;
+  background-color: white;
+  padding: 10px;
+  transition: 0.2s;
+  font-size: 16px;
+  margin-bottom: 10px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+main .Basgetcard .card .basket_item button:hover {
+  background-color: wheat;
+}
+main .Basgetcard .shop {
+  display: flex;
+  justify-content: center;
+  padding: 20px 0;
+}
+main .Basgetcard .shop .sale {
+  display: flex;
+  align-self: center;
+  justify-content: center;
+  padding: 5%;
+  border-radius: 50%;
+  color: white;
+  background-color: rgba(247, 125, 125, 0.755);
+}
+main .Basgetcard .shop .ptag {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+main .Basgetcard .shop .ptag p {
+  color: black;
+  font-weight: bold;
+  font-size: 24px;
+}
+main .Basgetcard .shop .ptag h2 {
+  font-size: 22px;
+  color: rgba(247, 125, 125, 0.755);
 }/*# sourceMappingURL=main.css.map */

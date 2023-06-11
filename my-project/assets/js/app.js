@@ -3,6 +3,8 @@ const bars = document.querySelector(".bars");
 const remove = document.querySelector(".remove");
 const hamburger = document.querySelector(".hamburger");
 
+console.log(window.location.href);
+
 bars.addEventListener("click", function () {
   myul.classList.add("activebar");
   hamburger.classList.add("is-active");
@@ -112,6 +114,18 @@ async function myfetch1() {
 }
 const mycards = document.querySelector(".mycards");
 const autoplay = document.querySelector(".autoplay");
+let basket_arr = [];
+let wishlist_arr = [];
+//data ucun localstorage
+window.onload = function () {
+  if (localStorage.getItem("basket") !== null) {
+    basket_arr = JSON.parse(localStorage.getItem("basket"));
+  }
+  if (localStorage.getItem("wishlist") !== null) {
+    wishlist_arr = JSON.parse(localStorage.getItem("wishlist"));
+  }
+};
+
 function cretElement(data) {
   // createelement
   const carddiv = document.createElement("div");
@@ -122,8 +136,16 @@ function cretElement(data) {
 
   const btndiv = document.createElement("div");
 
-  const btnsee = document.createElement("button");
+  const btnsee = document.createElement("a");
   const btnbasget = document.createElement("button");
+
+  btnbasget.addEventListener("click", function () {
+    if (basket_arr.find((x) => x.id == data.id) === undefined) {
+      basket_arr.push({ ...data, count: 1 });
+    }
+    localStorage.setItem("basket", JSON.stringify(basket_arr));
+  });
+
   const myp = document.createElement("p");
   myp.innerText = "";
   if (data.sale !== "false") {
@@ -148,10 +170,12 @@ function cretElement(data) {
 
   myimg.src = data.img_src;
   btnsee.innerHTML = `<i class="fa-solid fa-eye"></i> View Details`;
+  btnsee.href = `http://127.0.0.1:5501/my-project/itemabout.html#${data.id}`;
+
   btnbasget.innerHTML = `<i class="fa-solid fa-cart-shopping"></i>
 Select Options`;
   p.innerText = data.name;
-  h2.innerText = data.price;
+  h2.innerText = data.price + "$";
 
   // append
   pdiv.append(p, h2);
@@ -172,8 +196,16 @@ function cretElement1(data) {
 
   const btndiv = document.createElement("div");
 
-  const btnsee = document.createElement("button");
+  const btnsee = document.createElement("a");
   const btnbasget = document.createElement("button");
+
+  btnbasget.addEventListener("click", function () {
+    if (basket_arr.find((x) => x.id == data.id) === undefined) {
+      basket_arr.push({ ...data, count: 1 });
+    }
+    localStorage.setItem("basket", JSON.stringify(basket_arr));
+  });
+
   const myp = document.createElement("p");
   myp.innerText = "";
   if (data.sale !== "false") {
@@ -199,10 +231,12 @@ function cretElement1(data) {
 
   myimg.src = data.img_src;
   btnsee.innerHTML = `<i class="fa-solid fa-eye"></i> View Details`;
+  btnsee.href = "http://127.0.0.1:5501/my-project/itemabout.html";
+
   btnbasget.innerHTML = `<i class="fa-solid fa-cart-shopping"></i>
 Select Options`;
   p.innerText = data.name;
-  h2.innerText = data.price;
+  h2.innerText = data.price + "$";
 
   // append
   carddiv.append(imgdiv, shopdiv);

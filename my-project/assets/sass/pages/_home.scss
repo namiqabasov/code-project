@@ -239,6 +239,14 @@ main {
               .see {
                 background-color: black;
                 color: white;
+                width: 50%;
+                padding: 20px 0;
+
+                border: 0;
+
+                i {
+                  margin-left: 10px;
+                }
               }
 
               .basket {
@@ -404,6 +412,15 @@ main {
               .see {
                 background-color: black;
                 color: white;
+                width: 50%;
+                padding: 20px 0;
+
+                border: 0;
+                font-size: 12px;
+
+                i {
+                  margin-left: 10px;
+                }
               }
 
               .basket {
@@ -414,6 +431,7 @@ main {
               button {
                 width: 50%;
                 padding: 20px 0;
+                font-size: 12px;
 
                 border: 0;
               }
