@@ -91,6 +91,41 @@ nav {
           }
         }
       }
+
+
+      .basket {
+        position: relative;
+
+        .basget_leng {
+          position: absolute;
+          top: -10px;
+          left: 10px;
+          z-index: 4;
+          background-color: red;
+          color: white;
+          border-radius: 50px;
+          width: 15px;
+          text-align: center;
+          font-size: 12px;
+        }
+      }
+
+      .wishlist {
+        position: relative;
+
+        .wishlist_leng {
+          position: absolute;
+          top: -10px;
+          left: 10px;
+          z-index: 4;
+          background-color: red;
+          color: white;
+          border-radius: 50px;
+          width: 15px;
+          text-align: center;
+          font-size: 12px;
+        }
+      }
     }
 
     .bars {

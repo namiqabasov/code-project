@@ -212,6 +212,20 @@ main {
             overflow: hidden;
             height: 200px;
 
+            .wislis {
+              position: absolute;
+              top: 10px;
+              right: 10px;
+              z-index: 2;
+              background: none;
+              border: 0;
+              font-size: 20px;
+
+              i {
+                color: red;
+              }
+            }
+
             img {
               width: 100%;
               height: 200px;
@@ -235,6 +249,9 @@ main {
               transition: 0.4s;
               display: flex;
               width: 100%;
+
+
+
 
               .see {
                 background-color: black;
@@ -385,6 +402,20 @@ main {
             transition: 0.4s;
             overflow: hidden;
             height: auto;
+
+            .wislis {
+              position: absolute;
+              top: 10px;
+              right: 10px;
+              z-index: 2;
+              background: none;
+              border: 0;
+              font-size: 16px;
+
+              i {
+                color: red;
+              }
+            }
 
             img {
               width: 100%;

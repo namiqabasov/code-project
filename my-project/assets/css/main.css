@@ -110,6 +110,36 @@ nav .mycontainer .icons .Search .activinput button {
 nav .mycontainer .icons .Search .activinput button:hover {
   transform: rotateZ(-90deg);
 }
+nav .mycontainer .icons .basket {
+  position: relative;
+}
+nav .mycontainer .icons .basket .basget_leng {
+  position: absolute;
+  top: -10px;
+  left: 10px;
+  z-index: 4;
+  background-color: red;
+  color: white;
+  border-radius: 50px;
+  width: 15px;
+  text-align: center;
+  font-size: 12px;
+}
+nav .mycontainer .icons .wishlist {
+  position: relative;
+}
+nav .mycontainer .icons .wishlist .wishlist_leng {
+  position: absolute;
+  top: -10px;
+  left: 10px;
+  z-index: 4;
+  background-color: red;
+  color: white;
+  border-radius: 50px;
+  width: 15px;
+  text-align: center;
+  font-size: 12px;
+}
 nav .mycontainer .bars {
   display: none;
 }
@@ -385,6 +415,18 @@ main .product .mycontainer .mycards .card .img {
   overflow: hidden;
   height: 200px;
 }
+main .product .mycontainer .mycards .card .img .wislis {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 2;
+  background: none;
+  border: 0;
+  font-size: 20px;
+}
+main .product .mycontainer .mycards .card .img .wislis i {
+  color: red;
+}
 main .product .mycontainer .mycards .card .img img {
   width: 100%;
   height: 200px;
@@ -514,6 +556,18 @@ main .Fashion .mycontainer .autoplay .card .img {
   transition: 0.4s;
   overflow: hidden;
   height: auto;
+}
+main .Fashion .mycontainer .autoplay .card .img .wislis {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 2;
+  background: none;
+  border: 0;
+  font-size: 16px;
+}
+main .Fashion .mycontainer .autoplay .card .img .wislis i {
+  color: red;
 }
 main .Fashion .mycontainer .autoplay .card .img img {
   width: 100%;
@@ -769,6 +823,7 @@ footer .RESERVED p {
     flex-direction: column;
     align-items: center;
     gap: 50px;
+    padding: 10px;
   }
 }
 
@@ -1996,6 +2051,154 @@ main .Basgetcard .shop .ptag p {
   font-size: 24px;
 }
 main .Basgetcard .shop .ptag h2 {
+  font-size: 22px;
+  color: rgba(247, 125, 125, 0.755);
+}
+
+main .mycard .mycontainer {
+  display: flex;
+  gap: 20px;
+}
+main .mycard .mycontainer .myimg {
+  width: 50%;
+}
+main .mycard .mycontainer .myimg img {
+  width: 100%;
+}
+main .mycard .mycontainer .about {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+main .mycard .mycontainer .about h2 {
+  font-size: 44px;
+  color: rgb(36, 36, 36);
+}
+main .mycard .mycontainer .about h3 {
+  font-size: 32px;
+  color: rgba(156, 13, 13, 0.893);
+}
+main .mycard .mycontainer .about .impbtn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+main .mycard .mycontainer .about .impbtn input {
+  width: 50px;
+  padding: 10px 5px 10px 10px;
+}
+main .mycard .mycontainer .about .impbtn button {
+  background-color: rgba(255, 0, 0, 0.548);
+  border: 0;
+  max-width: 200px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  color: white;
+  font-size: 18px;
+  transition: 0.4s;
+}
+main .mycard .mycontainer .about .impbtn button:hover {
+  background-color: rgba(255, 0, 0, 0.766);
+}
+@media screen and (max-width: 768px) {
+  main .mycard .mycontainer {
+    flex-direction: column;
+    align-items: center;
+  }
+  main .mycard .mycontainer .about h2 {
+    font-size: 32px;
+  }
+}
+
+main .mycontainer .Wishlistcard {
+  padding-top: 100px;
+  display: flex;
+  gap: 20px;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+main .mycontainer .Wishlistcard .card {
+  width: 300px;
+}
+main .mycontainer .Wishlistcard .card .imgdiv {
+  overflow: hidden;
+  width: 100%;
+}
+main .mycontainer .Wishlistcard .card .imgdiv img {
+  width: 100%;
+  height: 200px;
+  transition: 0.4s;
+}
+main .mycontainer .Wishlistcard .card .imgdiv:hover img {
+  transform: scale(1.2);
+}
+main .mycontainer .Wishlistcard .card .imgdiv .divbtn {
+  position: absolute;
+  background-color: black;
+  z-index: 2;
+  bottom: -80px;
+  transition: 0.4s;
+  display: flex;
+  width: 100%;
+}
+main .mycontainer .Wishlistcard .card .imgdiv .divbtn .see {
+  background-color: black;
+  color: white;
+}
+main .mycontainer .Wishlistcard .card .imgdiv .divbtn button {
+  width: 50%;
+  padding: 20px 0;
+  border: 0;
+}
+main .mycontainer .Wishlistcard .card .imgdiv:hover .divbtn {
+  bottom: 0;
+}
+main .mycontainer .Wishlistcard .card .imgdiv:hover .divbtn button {
+  display: block;
+  padding: 20px 0;
+}
+main .mycontainer .Wishlistcard .card .wishlist_item {
+  display: flex;
+  gap: 10px;
+}
+main .mycontainer .Wishlistcard .card .wishlist_item button {
+  border: 0;
+  background-color: white;
+  padding: 10px;
+  transition: 0.2s;
+  font-size: 16px;
+  margin-bottom: 10px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+main .mycontainer .Wishlistcard .card .wishlist_item button:hover {
+  background-color: wheat;
+}
+main .mycontainer .Wishlistcard .shop {
+  display: flex;
+  justify-content: center;
+  padding: 20px 0;
+}
+main .mycontainer .Wishlistcard .shop .sale {
+  display: flex;
+  align-self: center;
+  justify-content: center;
+  padding: 5%;
+  border-radius: 50%;
+  color: white;
+  background-color: rgba(247, 125, 125, 0.755);
+}
+main .mycontainer .Wishlistcard .shop .ptag {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+main .mycontainer .Wishlistcard .shop .ptag p {
+  color: black;
+  font-weight: bold;
+  font-size: 24px;
+}
+main .mycontainer .Wishlistcard .shop .ptag h2 {
   font-size: 22px;
   color: rgba(247, 125, 125, 0.755);
 }/*# sourceMappingURL=main.css.map */

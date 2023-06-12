@@ -114,8 +114,21 @@ async function myfetch1() {
 }
 const mycards = document.querySelector(".mycards");
 const autoplay = document.querySelector(".autoplay");
+
+let basget_leng = document.querySelector(".basget_leng");
+
 let basket_arr = [];
+
+basket_arr = JSON.parse(localStorage.getItem("basket"));
+
+basget_leng.innerHTML = basket_arr.length;
+
+let wishlist_leng = document.querySelector(".wishlist_leng");
+
 let wishlist_arr = [];
+wishlist_arr = JSON.parse(localStorage.getItem("wishlist"));
+wishlist_leng.innerHTML = wishlist_arr.length;
+
 //data ucun localstorage
 window.onload = function () {
   if (localStorage.getItem("basket") !== null) {
@@ -138,12 +151,33 @@ function cretElement(data) {
 
   const btnsee = document.createElement("a");
   const btnbasget = document.createElement("button");
+  const btnwishlist = document.createElement("button");
+
+  btnwishlist.classList.add("wislis");
+  btnwishlist.innerHTML = `<i class="fa-regular fa-heart"></i>`;
 
   btnbasget.addEventListener("click", function () {
     if (basket_arr.find((x) => x.id == data.id) === undefined) {
       basket_arr.push({ ...data, count: 1 });
     }
     localStorage.setItem("basket", JSON.stringify(basket_arr));
+    window.location.reload();
+  });
+
+  if (wishlist_arr.find((x) => x.id == data.id) !== undefined) {
+    btnwishlist.innerHTML = `<i class="fa-solid fa-heart"></i>`;
+  }
+
+  btnwishlist.addEventListener("click", () => {
+    if (wishlist_arr.find((x) => x.id == data.id) === undefined) {
+      wishlist_arr.push(data);
+      btnwishlist.innerHTML = `<i class="fa-solid fa-heart"></i>`;
+    } else {
+      wishlist_arr = wishlist_arr.filter((x) => x.id !== data.id);
+      btnwishlist.innerHTML = `<i class="fa-regular fa-heart"></i>`;
+    }
+    localStorage.setItem("wishlist", JSON.stringify(wishlist_arr));
+    window.location.reload();
   });
 
   const myp = document.createElement("p");
@@ -182,7 +216,7 @@ Select Options`;
   shopdiv.append(myp, pdiv);
 
   btndiv.append(btnsee, btnbasget);
-  imgdiv.append(myimg, btndiv);
+  imgdiv.append(myimg, btnwishlist, btndiv);
   carddiv.append(imgdiv, shopdiv);
   mycards.append(carddiv);
 }
@@ -198,12 +232,30 @@ function cretElement1(data) {
 
   const btnsee = document.createElement("a");
   const btnbasget = document.createElement("button");
+  const btnwishlist = document.createElement("button");
 
+  btnwishlist.classList.add("wislis");
+  btnwishlist.innerHTML = `<i class="fa-regular fa-heart"></i>`;
+  if (wishlist_arr.find((x) => x.id == data.id) !== undefined) {
+    btnwishlist.innerHTML = `<i class="fa-solid fa-heart"></i>`;
+  }
   btnbasget.addEventListener("click", function () {
     if (basket_arr.find((x) => x.id == data.id) === undefined) {
       basket_arr.push({ ...data, count: 1 });
     }
     localStorage.setItem("basket", JSON.stringify(basket_arr));
+    window.location.reload();
+  });
+  btnwishlist.addEventListener("click", () => {
+    if (wishlist_arr.find((x) => x.id == data.id) === undefined) {
+      wishlist_arr.push(data);
+      btnwishlist.innerHTML = `<i class="fa-solid fa-heart"></i>`;
+    } else {
+      wishlist_arr = wishlist_arr.filter((x) => x.id !== data.id);
+      btnwishlist.innerHTML = `<i class="fa-regular fa-heart"></i>`;
+    }
+    localStorage.setItem("wishlist", JSON.stringify(wishlist_arr));
+    window.location.reload();
   });
 
   const myp = document.createElement("p");
@@ -231,7 +283,7 @@ function cretElement1(data) {
 
   myimg.src = data.img_src;
   btnsee.innerHTML = `<i class="fa-solid fa-eye"></i> View Details`;
-  btnsee.href = "http://127.0.0.1:5501/my-project/itemabout.html";
+  btnsee.href = `http://127.0.0.1:5501/my-project/itemabout.html#${data.id}`;
 
   btnbasget.innerHTML = `<i class="fa-solid fa-cart-shopping"></i>
 Select Options`;
@@ -244,7 +296,7 @@ Select Options`;
   shopdiv.append(myp, pdiv);
 
   btndiv.append(btnsee, btnbasget);
-  imgdiv.append(myimg, btndiv);
+  imgdiv.append(myimg, btnwishlist, btndiv);
 
   autoplay.append(carddiv);
 }
