@@ -10,12 +10,14 @@ wishlist_arr.forEach((element) => {
   const imgdiv = document.createElement("div");
   const myimg = document.createElement("img");
   const h3 = document.createElement("h3");
+  const a = document.createElement("a");
   const delet = document.createElement("button");
 
   imgdiv.className = "imgdiv";
   mydiv.classList.add("card");
   myimg.src = element.img_src;
-  h3.innerHTML = element.name;
+  a.innerHTML = element.name;
+  a.href = `http://127.0.0.1:5501/my-project/itemabout.html#${element.id}`;
   delet.innerHTML = "X";
 
   //delete
@@ -29,6 +31,7 @@ wishlist_arr.forEach((element) => {
 
   creddiv.classList.add("wishlist_item");
   imgdiv.append(myimg);
+  h3.appendChild(a);
   creddiv.append(h3, delet);
   mydiv.append(creddiv, imgdiv);
   Wishlistcard.append(mydiv);

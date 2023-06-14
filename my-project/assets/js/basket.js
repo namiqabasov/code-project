@@ -12,6 +12,7 @@ basket_arr.forEach((element) => {
   const imgdiv = document.createElement("div");
   const myimg = document.createElement("img");
   const h3 = document.createElement("h3");
+  const a = document.createElement("a");
   const incin = document.createElement("button");
   const secp = document.createElement("p");
   const decin = document.createElement("button");
@@ -20,7 +21,8 @@ basket_arr.forEach((element) => {
   imgdiv.className = "imgdiv";
   mydiv.classList.add("card");
   myimg.src = element.img_src;
-  h3.innerHTML = element.name;
+  a.innerHTML = element.name;
+  a.href = `http://127.0.0.1:5501/my-project/itemabout.html#${element.id}`;
   incin.innerHTML = "+";
   secp.innerHTML = element.count;
   decin.innerHTML = "-";
@@ -57,6 +59,7 @@ basket_arr.forEach((element) => {
 
   creddiv.classList.add("basket_item");
   imgdiv.append(myimg);
+  h3.append(a);
   creddiv.append(h3, decin, secp, incin, delet);
   mydiv.append(creddiv, imgdiv);
   Basgetcard.append(mydiv);

@@ -1,3 +1,10 @@
+//animation
+const Discover = document.querySelector(".Discover");
+window.addEventListener("scroll", function () {
+  let scrollPosition = window.scrollY;
+  Discover.style.backgroundPositionX = -scrollPosition + "px";
+});
+
 // mocapi hissesi
 async function myfetch() {
   const respon = await fetch(`http://localhost:3000/post`);
@@ -77,7 +84,6 @@ window.onload = function () {
     wishlist_arr = JSON.parse(localStorage.getItem("wishlist"));
   }
 };
-
 function cretElement(data) {
   // createelement
   const carddiv = document.createElement("div");
