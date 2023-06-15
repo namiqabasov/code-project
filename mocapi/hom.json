@@ -5,7 +5,7 @@
       "img_src": "https://demo.goodlayers.com/infinite/homepages/emporium/wp-content/uploads/sites/18/2016/06/product-luxry-sofa.jpg",
       "name": "Luxury Sofa",
       "sale": "SALE!",
-      "price": 450.0,
+      "price": 450,
       "command": "Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Vestibulum id ligula porta felis euismod semper. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla. Cras justo odio, dapibus ac facilisis in, egestas eget quam."
     },
     {
@@ -13,7 +13,7 @@
       "img_src": "https://demo.goodlayers.com/infinite/homepages/emporium/wp-content/uploads/sites/18/2016/06/product-gloves.jpg",
       "name": "Leather Gloves",
       "sale": "false",
-      "price": 27.0,
+      "price": 27,
       "command": "Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Vestibulum id ligula porta felis euismod semper. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla. Cras justo odio, dapibus ac facilisis in, egestas eget quam."
     },
     {
@@ -21,7 +21,7 @@
       "img_src": "https://demo.goodlayers.com/infinite/homepages/emporium/wp-content/uploads/sites/18/2016/06/product-cups.jpg",
       "name": "Colorful Bowl",
       "sale": "false",
-      "price": 18.0,
+      "price": 18,
       "command": "Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Vestibulum id ligula porta felis euismod semper. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla. Cras justo odio, dapibus ac facilisis in, egestas eget quam."
     },
     {
@@ -29,7 +29,7 @@
       "img_src": "https://demo.goodlayers.com/infinite/homepages/emporium/wp-content/uploads/sites/18/2016/06/product-bag.jpg",
       "name": "Women Bag",
       "sale": "false",
-      "price": 350.0,
+      "price": 350,
       "command": "Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Vestibulum id ligula porta felis euismod semper. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla. Cras justo odio, dapibus ac facilisis in, egestas eget quam."
     },
     {
@@ -37,7 +37,7 @@
       "img_src": "https://demo.goodlayers.com/infinite/homepages/emporium/wp-content/uploads/sites/18/2016/06/product-tshitr.jpg",
       "name": "Minimal T-Shirt",
       "sale": "false",
-      "price": 15.0,
+      "price": 15,
       "command": "Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Vestibulum id ligula porta felis euismod semper. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla. Cras justo odio, dapibus ac facilisis in, egestas eget quam."
     },
     {
@@ -45,7 +45,7 @@
       "img_src": "https://demo.goodlayers.com/infinite/homepages/emporium/wp-content/uploads/sites/18/2016/06/product-plates.jpg",
       "name": "Plates Set",
       "sale": "false",
-      "price": 30.0,
+      "price": 30,
       "command": "Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Vestibulum id ligula porta felis euismod semper. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla. Cras justo odio, dapibus ac facilisis in, egestas eget quam."
     },
     {
@@ -53,7 +53,7 @@
       "img_src": "https://demo.goodlayers.com/infinite/homepages/emporium/wp-content/uploads/sites/18/2016/06/product-modern-sofa.jpg",
       "name": "Modern Sofa",
       "sale": "false",
-      "price": 900.0,
+      "price": 900,
       "command": "Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Vestibulum id ligula porta felis euismod semper. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla. Cras justo odio, dapibus ac facilisis in, egestas eget quam."
     },
     {
@@ -61,7 +61,7 @@
       "img_src": "https://demo.goodlayers.com/infinite/homepages/emporium/wp-content/uploads/sites/18/2016/06/product-bed.jpg",
       "name": "Bed Linen",
       "sale": "false",
-      "price": 79.0,
+      "price": 79,
       "command": "Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Vestibulum id ligula porta felis euismod semper. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla. Cras justo odio, dapibus ac facilisis in, egestas eget quam."
     },
     {
@@ -69,7 +69,7 @@
       "img_src": "https://demo.goodlayers.com/infinite/homepages/emporium/wp-content/uploads/sites/18/2016/06/product-shoes.jpg",
       "name": "Minimal Shoes",
       "sale": "SALE!",
-      "price": 60.0,
+      "price": 60,
       "command": "Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Vestibulum id ligula porta felis euismod semper. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla. Cras justo odio, dapibus ac facilisis in, egestas eget quam."
     },
     {
@@ -77,7 +77,7 @@
       "img_src": "https://demo.goodlayers.com/infinite/homepages/emporium/wp-content/uploads/sites/18/2016/06/product-bed-600x472.jpg",
       "name": "Modern Sofa",
       "sale": "false",
-      "price": 900.0,
+      "price": 900,
       "command": "Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Vestibulum id ligula porta felis euismod semper. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla. Cras justo odio, dapibus ac facilisis in, egestas eget quam."
     },
     {
@@ -85,7 +85,7 @@
       "img_src": "https://a6e8z9v6.stackpathcdn.com/kleanity/wp-content/uploads/2016/08/brown-notebook.jpg",
       "name": "Modern Bed",
       "sale": "SALE!",
-      "price": 830.0,
+      "price": 830,
       "command": "Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Vestibulum id ligula porta felis euismod semper. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla. Cras justo odio, dapibus ac facilisis in, egestas eget quam."
     },
     {
@@ -93,7 +93,7 @@
       "img_src": "https://a6e8z9v6.stackpathcdn.com/kleanity/wp-content/uploads/2016/08/minimal-white-chair.jpg",
       "name": "Modern Chair",
       "sale": "false",
-      "price": 1000.0,
+      "price": 1000,
       "command": "Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Vestibulum id ligula porta felis euismod semper. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla. Cras justo odio, dapibus ac facilisis in, egestas eget quam."
     }
   ],
@@ -101,6 +101,22 @@
     {
       "id": 1,
       "command": "Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Vestibulum id ligula porta felis euismod semper. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla. Cras justo odio, dapibus ac facilisis in, egestas eget quam."
+    }
+  ],
+  "login": [
+    {
+      "name": "Evelyn",
+      "lastname": "Pratt",
+      "mail": "jufutawo@mailinator.com",
+      "password": "Pa$$w0rd!",
+      "id": 1
+    },
+    {
+      "name": "namiq",
+      "lastname": "Everett",
+      "mail": "namiq200218@gmaill.com",
+      "password": "1234",
+      "id": 2
     }
   ]
 }

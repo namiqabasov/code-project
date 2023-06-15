@@ -1,0 +1,102 @@
+.registration {
+    padding: 100px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+
+    input {
+        max-width: 300px;
+        width: 100%;
+        margin-bottom: 20px;
+        padding: 10px 15px;
+        border-radius: 3px;
+        border: 1px solid rgba(63, 61, 61, 0.359);
+    }
+
+    button {
+        padding: 15px 30px;
+        border: 0;
+        background-color: rgb(71, 38, 38);
+        font-size: 18px;
+        color: rgb(179, 175, 175);
+        font-weight: bold;
+        transition: 0.4s;
+        border-radius: 10px;
+
+        &:hover {
+
+            background-color: rgba(72, 13, 13, 0.804);
+            color: white;
+        }
+    }
+
+    a {
+        padding: 15px 30px;
+        border: 0;
+        background-color: rgb(71, 38, 38);
+        font-size: 18px;
+        color: rgb(0, 0, 0);
+        font-weight: bold;
+        transition: 0.4s;
+        border-radius: 10px;
+
+        &:hover {
+
+            background-color: rgba(72, 13, 13, 0.804);
+            color: white;
+        }
+    }
+
+}
+
+.login {
+    padding: 100px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+
+    input {
+        max-width: 300px;
+        width: 100%;
+        margin-bottom: 20px;
+        padding: 10px 15px;
+        border-radius: 3px;
+        border: 1px solid rgba(63, 61, 61, 0.359);
+    }
+
+    button {
+        padding: 15px 30px;
+        border: 0;
+        background-color: rgb(71, 38, 38);
+        font-size: 18px;
+        color: rgb(179, 175, 175);
+        font-weight: bold;
+        transition: 0.4s;
+        border-radius: 10px;
+
+        &:hover {
+
+            background-color: rgba(72, 13, 13, 0.804);
+            color: white;
+        }
+    }
+
+    a {
+        padding: 15px 30px;
+        border: 0;
+        background-color: rgb(71, 38, 38);
+        font-size: 18px;
+        color: rgb(0, 0, 0);
+        font-weight: bold;
+        transition: 0.4s;
+        border-radius: 10px;
+
+        &:hover {
+
+            background-color: rgba(72, 13, 13, 0.804);
+            color: white;
+        }
+    }
+}

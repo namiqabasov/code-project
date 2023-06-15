@@ -248,3 +248,34 @@ Select Options`;
 
 myfetch();
 myfetch1();
+
+const mylogin = document.querySelector(".mylogin");
+const mynumber = document.querySelector(".mynumber");
+
+if (window.location.hash.slice(1) === "") {
+  mylogin.innerHTML = `<a href="login.html?#">login</a>`;
+} else {
+  async function loginfetch() {
+    const res = await fetch(
+      `http://localhost:3000/login/${window.location.hash.slice(1)}`
+    );
+    const data = await res.json();
+    mynumber.innerText = data.mail;
+
+    const div = document.createElement("div");
+    const btn = document.createElement("button");
+    const h2 = document.createElement("h2");
+    const p = document.createElement("p");
+    h2.innerText = data.name;
+    p.innerText = data.lastname;
+    btn.innerText = "SING OUT";
+
+    btn.addEventListener("click", function () {
+      window.location.hash = "";
+      window.location.reload();
+    });
+    div.append(h2, p);
+    mylogin.append(div, btn);
+  }
+  loginfetch();
+}

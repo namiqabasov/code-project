@@ -69,7 +69,71 @@ nav .mycontainer .icons .Search .myinput {
   display: none;
 }
 nav .mycontainer .icons .Search .myinput .position {
+  top: 20px;
   position: relative;
+}
+nav .mycontainer .icons .Search .myinput .input_item {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 1%;
+}
+nav .mycontainer .icons .Search .myinput .input_item .card {
+  max-width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+}
+nav .mycontainer .icons .Search .myinput .input_item .card .imgdiv {
+  overflow: hidden;
+  width: 100%;
+}
+nav .mycontainer .icons .Search .myinput .input_item .card .imgdiv img {
+  width: 100%;
+  height: 200px;
+  transition: 0.4s;
+}
+nav .mycontainer .icons .Search .myinput .input_item .card .imgdiv:hover img {
+  transform: scale(1.2);
+}
+nav .mycontainer .icons .Search .myinput .input_item .card .imgdiv .divbtn {
+  position: absolute;
+  background-color: black;
+  z-index: 2;
+  bottom: -80px;
+  transition: 0.4s;
+  display: flex;
+  width: 100%;
+}
+nav .mycontainer .icons .Search .myinput .input_item .card .imgdiv .divbtn .see {
+  background-color: black;
+  color: white;
+}
+nav .mycontainer .icons .Search .myinput .input_item .card .imgdiv .divbtn button {
+  width: 50%;
+  padding: 20px 0;
+  border: 0;
+}
+nav .mycontainer .icons .Search .myinput .input_item .card .imgdiv:hover .divbtn {
+  bottom: 0;
+}
+nav .mycontainer .icons .Search .myinput .input_item .card .imgdiv:hover .divbtn button {
+  display: block;
+  padding: 20px 0;
+}
+nav .mycontainer .icons .Search .myinput .input_item .card p {
+  color: rgb(148, 8, 8);
+  font-weight: bold;
+  font-size: 24px;
+}
+nav .mycontainer .icons .Search .myinput .input_item .card h3 {
+  padding: 20px 0;
+  font-size: 22px;
+}
+nav .mycontainer .icons .Search .myinput .input_item .card h3 a {
+  color: rgb(47, 26, 6);
+  font-weight: bold;
 }
 nav .mycontainer .icons .Search .activinput {
   display: block;
@@ -80,9 +144,11 @@ nav .mycontainer .icons .Search .activinput {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.514);
   display: flex;
+  flex-direction: column;
+  gap: 50px;
   align-items: center;
-  justify-content: center;
   z-index: 4;
+  overflow: auto;
 }
 nav .mycontainer .icons .Search .activinput i {
   position: absolute;
@@ -96,6 +162,7 @@ nav .mycontainer .icons .Search .activinput input {
   color: white;
   border-radius: 20px;
   border: none;
+  max-width: 300px;
 }
 nav .mycontainer .icons .Search .activinput button {
   position: absolute;
@@ -237,6 +304,45 @@ nav .mycontainer .bars {
 header {
   height: 200px;
   background-color: white;
+}
+header .logindiv {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: rgba(147, 209, 195, 0.586);
+  width: 100%;
+  height: 50px;
+}
+header .logindiv .mynumber p {
+  color: rgb(55, 5, 83);
+  font-size: 24px;
+}
+header .logindiv .mylogin {
+  display: flex;
+  gap: 10px;
+}
+header .logindiv .mylogin a {
+  color: rgba(21, 157, 0, 0.562);
+  transition: 0.4s;
+  font-size: 24px;
+  padding: 5px 30px;
+  border-radius: 10px;
+  background-color: rgba(4, 39, 120, 0.814);
+}
+header .logindiv .mylogin a:hover {
+  color: rgb(21, 157, 0);
+}
+header .logindiv .mylogin button {
+  border: 0;
+  background-color: rgb(11, 82, 63);
+  color: rgb(2, 2, 2);
+  padding: 10px 20px;
+  border-radius: 20px;
+  transition: 0.4s;
+}
+header .logindiv .mylogin button:hover {
+  color: white;
+  background-color: rgb(132, 3, 3);
 }
 
 main {
@@ -2201,4 +2307,90 @@ main .mycontainer .Wishlistcard .shop .ptag p {
 main .mycontainer .Wishlistcard .shop .ptag h2 {
   font-size: 22px;
   color: rgba(247, 125, 125, 0.755);
+}
+
+.registration {
+  padding: 100px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.registration input {
+  max-width: 300px;
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 10px 15px;
+  border-radius: 3px;
+  border: 1px solid rgba(63, 61, 61, 0.359);
+}
+.registration button {
+  padding: 15px 30px;
+  border: 0;
+  background-color: rgb(71, 38, 38);
+  font-size: 18px;
+  color: rgb(179, 175, 175);
+  font-weight: bold;
+  transition: 0.4s;
+  border-radius: 10px;
+}
+.registration button:hover {
+  background-color: rgba(72, 13, 13, 0.804);
+  color: white;
+}
+.registration a {
+  padding: 15px 30px;
+  border: 0;
+  background-color: rgb(71, 38, 38);
+  font-size: 18px;
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  transition: 0.4s;
+  border-radius: 10px;
+}
+.registration a:hover {
+  background-color: rgba(72, 13, 13, 0.804);
+  color: white;
+}
+
+.login {
+  padding: 100px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.login input {
+  max-width: 300px;
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 10px 15px;
+  border-radius: 3px;
+  border: 1px solid rgba(63, 61, 61, 0.359);
+}
+.login button {
+  padding: 15px 30px;
+  border: 0;
+  background-color: rgb(71, 38, 38);
+  font-size: 18px;
+  color: rgb(179, 175, 175);
+  font-weight: bold;
+  transition: 0.4s;
+  border-radius: 10px;
+}
+.login button:hover {
+  background-color: rgba(72, 13, 13, 0.804);
+  color: white;
+}
+.login a {
+  padding: 15px 30px;
+  border: 0;
+  background-color: rgb(71, 38, 38);
+  font-size: 18px;
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  transition: 0.4s;
+  border-radius: 10px;
+}
+.login a:hover {
+  background-color: rgba(72, 13, 13, 0.804);
+  color: white;
 }/*# sourceMappingURL=main.css.map */

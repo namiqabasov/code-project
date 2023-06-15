@@ -30,10 +30,15 @@ function mycreate(data) {
     }
   });
 
+  let basket_arr = [];
+
+  basket_arr = JSON.parse(localStorage.getItem("basket"));
+
   btn.addEventListener("click", function () {
     if (basket_arr.find((x) => x.id == data.id) === undefined) {
       basket_arr.push({ ...data, count: Number(input.value) });
     }
+
     localStorage.setItem("basket", JSON.stringify(basket_arr));
     window.location.reload();
   });
