@@ -283,7 +283,8 @@ nav {
           a {
             font-size: 24px;
             transition: 0.9;
-            color: white;
+            color: rgba(255, 255, 255, 0.745);
+            transition: 0.4s;
           }
 
           &:hover {
@@ -291,7 +292,7 @@ nav {
             width: 100px;
 
             a {
-              color: rgb(66, 66, 66);
+              color: rgb(255, 255, 255);
             }
           }
         }

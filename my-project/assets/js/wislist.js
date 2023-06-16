@@ -1,8 +1,23 @@
+//basget ucun
+const wishlist_leng = document.querySelector(".wishlist_leng");
+const basget_leng = document.querySelector(".basget_leng");
+
+let basket_arr = [];
+let wishlist_arr = [];
+
+//data ucun localstorage
+
+if (localStorage.getItem("basket") !== null) {
+  basket_arr = JSON.parse(localStorage.getItem("basket"));
+  basget_leng.innerHTML = basketarr.length;
+}
+if (localStorage.getItem("wishlist") !== null) {
+  wishlist_arr = JSON.parse(localStorage.getItem("wishlist"));
+  wishlist_leng.innerHTML = wishlist_arr.length;
+}
+
 //wishlist ucun
 const Wishlistcard = document.querySelector(".Wishlistcard");
-
-let wishlist_arr = [];
-wishlist_arr = JSON.parse(localStorage.getItem("wishlist"));
 
 wishlist_arr.forEach((element) => {
   const mydiv = document.createElement("div");
@@ -22,11 +37,10 @@ wishlist_arr.forEach((element) => {
 
   //delete
   delet.addEventListener("click", () => {
-    console.log(element.id);
     wishlist_arr = wishlist_arr.filter((x) => x.id !== element.id);
     localStorage.setItem("wishlist", JSON.stringify(wishlist_arr));
-    window.location.reload();
-    btn.parentElement.parentElement.remove();
+    delet.parentElement.parentElement.remove();
+    wishlist_leng.innerHTML = wishlist_arr.length;
   });
 
   creddiv.classList.add("wishlist_item");

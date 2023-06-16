@@ -59,27 +59,18 @@ async function imputFetch() {
     ) {
       inputCReate(element);
     }
-    console.log(element);
   });
 }
 
 //basget and wishlist
 
-let basget_leng = document.querySelector(".basget_leng");
-
 let basketarr = [];
 
 basketarr = JSON.parse(localStorage.getItem("basket"));
 
-basget_leng.innerHTML = basketarr.length;
-
-let wishlist_leng = document.querySelector(".wishlist_leng");
-
 let wishlistarr = [];
 
 wishlistarr = JSON.parse(localStorage.getItem("wishlist"));
-
-wishlist_leng.innerHTML = wishlistarr.length;
 
 function inputCReate(element) {
   const mydiv = document.createElement("div");

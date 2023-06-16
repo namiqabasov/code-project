@@ -1,9 +1,17 @@
 const Basgetcard = document.querySelector(".Basgetcard");
 const total = document.querySelector(".total p");
-
+const wishlist_leng = document.querySelector(".wishlist_leng");
+const basget_leng = document.querySelector(".basget_leng");
+let wishlist_arr = [];
 let basket_arr = [];
-
-basket_arr = JSON.parse(localStorage.getItem("basket"));
+if (localStorage.getItem("basket") !== null) {
+  basket_arr = JSON.parse(localStorage.getItem("basket"));
+  basget_leng.innerHTML = basketarr.length;
+}
+if (localStorage.getItem("wishlist") !== null) {
+  wishlist_arr = JSON.parse(localStorage.getItem("wishlist"));
+  wishlist_leng.innerHTML = wishlist_arr.length;
+}
 
 getTotal();
 basket_arr.forEach((element) => {
@@ -54,7 +62,7 @@ basket_arr.forEach((element) => {
     getTotal();
 
     delet.parentElement.parentElement.remove();
-    window.location.reload();
+    basget_leng.innerHTML = basket_arr.length;
   });
 
   creddiv.classList.add("basket_item");

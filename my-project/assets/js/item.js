@@ -1,5 +1,21 @@
 //basget ucun
+const wishlist_leng = document.querySelector(".wishlist_leng");
+const basget_leng = document.querySelector(".basget_leng");
 
+let basket_arr = [];
+let wishlist_arr = [];
+
+//data ucun localstorage
+window.onload = function () {
+  if (localStorage.getItem("basket") !== null) {
+    basket_arr = JSON.parse(localStorage.getItem("basket"));
+    basget_leng.innerHTML = basketarr.length;
+  }
+  if (localStorage.getItem("wishlist") !== null) {
+    wishlist_arr = JSON.parse(localStorage.getItem("wishlist"));
+    wishlist_leng.innerHTML = wishlist_arr.length;
+  }
+};
 // fetch ucun
 
 const myseebox = document.querySelector(".myseebox");
@@ -30,15 +46,10 @@ function mycreate(data) {
     }
   });
 
-  let basket_arr = [];
-
-  basket_arr = JSON.parse(localStorage.getItem("basket"));
-
   btn.addEventListener("click", function () {
     if (basket_arr.find((x) => x.id == data.id) === undefined) {
       basket_arr.push({ ...data, count: Number(input.value) });
     }
-
     localStorage.setItem("basket", JSON.stringify(basket_arr));
     window.location.reload();
   });

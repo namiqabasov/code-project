@@ -3,7 +3,23 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    border: 1px solid rgba(0, 0, 0, 0.275);
+    max-width: 500px;
+    margin: 100px auto;
+    box-shadow: 5px 10px rgba(0, 0, 0, 0.19);
 
+    h1 {
+        text-align: center;
+        font-weight: bold;
+        font-size: 32px;
+        padding-bottom: 100px;
+    }
+
+    @media screen and (max-width:300px) {
+        h1 {
+            font-size: 18px;
+        }
+    }
 
     input {
         max-width: 300px;
@@ -55,7 +71,23 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    border: 1px solid rgba(0, 0, 0, 0.275);
+    max-width: 500px;
+    margin: 100px auto;
+    box-shadow: 5px 10px rgba(0, 0, 0, 0.19);
 
+    h1 {
+        text-align: center;
+        font-weight: bold;
+        font-size: 32px;
+        padding-bottom: 100px;
+    }
+
+    @media screen and (max-width:300px) {
+        h1 {
+            font-size: 18px;
+        }
+    }
 
     input {
         max-width: 300px;
@@ -98,5 +130,14 @@
             background-color: rgba(72, 13, 13, 0.804);
             color: white;
         }
+    }
+}
+
+@media screen and (max-width:340px) {
+    .mybtndiv {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
     }
 }
