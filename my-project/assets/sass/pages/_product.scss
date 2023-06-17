@@ -1,0 +1,162 @@
+main {
+    .imgshop {
+        background-image: url(https://a6e8z9v6.stackpathcdn.com/infinite/homepages/emporium/wp-content/uploads/sites/18/2016/06/cta-bg.jpg);
+        background-repeat: repeat;
+        background-position: center;
+        top: 0;
+        left: 0;
+        background-attachment: fixed;
+        width: 100%;
+        height: 450px;
+        background-size: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        h2 {
+            color: white;
+            font-size: 32px;
+            border: 2px ridge white;
+            padding: 10px;
+        }
+    }
+
+    .product_shopp {
+        .mycontainer {
+            display: flex;
+            gap: 2%;
+
+            .myproduct {
+                width: 70%;
+
+                .card {
+                    display: flex;
+                    align-items: center;
+                    gap: 20px;
+                    border-bottom: 1px solid rgba(21, 20, 20, 0.414);
+                    padding: 20% 0;
+                    background-color: rgba(255, 253, 253, 0.804);
+
+                    .img_sec {
+                        max-width: 200px;
+                        overflow: hidden;
+                        border-radius: 20px;
+
+                        img {
+                            width: 100%;
+                            transition: 0.4s;
+
+                            &:hover {
+                                transform: scale(1.2);
+                            }
+                        }
+                    }
+
+                    .about {
+                        h2 {
+                            font-size: 2vw;
+
+                            a {
+                                color: rgb(141, 4, 4);
+
+                            }
+                        }
+
+                        h3 {
+                            color: black;
+                            font-size: 1.5vw;
+                        }
+
+                        p {
+                            color: rgba(7, 7, 7, 0.633);
+                            max-width: 500px;
+                            font-size: 1vw;
+                        }
+                    }
+                }
+
+            }
+
+            .my_filter {
+                width: 30%;
+                border-left: 5px solid burlywood;
+                padding-left: 10px;
+
+                .filter {
+                    h1 {
+                        font-size: 2vw;
+                        color: rgb(180, 28, 28);
+                        padding-top: 30%;
+                        text-align: center;
+                        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                    }
+                }
+
+                .hot_product {
+
+
+                    .card {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        gap: 10px;
+                        border-bottom: 1px solid rgba(29, 28, 28, 0.422);
+                        padding: 30% 0;
+                        background-color: rgba(255, 253, 253, 0.804);
+
+                        .img_sec {
+                            max-width: 400px;
+                            overflow: hidden;
+
+
+                            img {
+                                width: 100%;
+                                height: auto;
+                                transition: 0.4s;
+
+                                &:hover {
+                                    transform: scale(1.2);
+                                }
+                            }
+                        }
+
+                        .about {
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                            gap: 20px;
+
+                            h2 {
+                                font-size: 2vw;
+
+                                a {
+                                    color: rgb(141, 4, 4);
+
+                                }
+                            }
+
+                            h3 {
+                                color: black;
+                                font-size: 1.5vw;
+                            }
+
+                            p {
+
+                                display: flex;
+                                align-self: center;
+                                justify-content: center;
+                                padding: 13% 3%;
+                                border-radius: 50%;
+                                color: white;
+                                background-color: rgba(254, 0, 0, 0.755);
+                                font-size: 2vw;
+
+                            }
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+}
