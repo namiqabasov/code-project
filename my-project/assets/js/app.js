@@ -51,7 +51,7 @@ async function myfetch1() {
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
-          dots: true,
+          dots: false,
           infinite: true,
         },
       },
@@ -60,6 +60,14 @@ async function myfetch1() {
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
+          dots: false,
+        },
+      },
+      {
+        breakpoint: 340,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 0.5,
           dots: false,
         },
       },
