@@ -18,7 +18,7 @@ const admin_start = document.querySelector(".admin_start");
 const adminname = document.querySelector("#adminname");
 const adminpass = document.querySelector("#adminpass");
 const admindiv = document.querySelector("#admindiv");
-const adinput = document.querySelector("#adinput");
+const adinput = document.querySelector("#ppcatacory");
 
 menu_btn.addEventListener("click", function () {
   admin_form.style.cssText = `
@@ -45,6 +45,7 @@ const pprice = document.querySelector("#pprice");
 const pabout = document.querySelector("#pabout");
 const psael = document.querySelector("#psael");
 const pamount = document.querySelector("#pamount");
+const pcatacory = document.querySelector("#pcatacory");
 
 async function putfetch(editobj) {
   const res = await fetch(`http://localhost:3000/post/${editobj.id}`, {
@@ -65,6 +66,7 @@ const sale = document.querySelector("#sale");
 const price = document.querySelector("#price");
 const amount = document.querySelector("#amount");
 const command = document.querySelector("#command");
+const catacory = document.querySelector("#catacory");
 
 async function postfetch(postobj) {
   const res = await fetch(`http://localhost:3000/post`, {
@@ -85,6 +87,7 @@ function admin_post() {
       price: price.value,
       amount: amount.value,
       command: command.value,
+      catacory: catacory.value,
     };
     postfetch(postobj);
   });
@@ -132,13 +135,14 @@ function creElement(data) {
   });
 
   btnedit.addEventListener("click", function () {
-    document.documentElement.scrollTop = 5000;
+    document.documentElement.scrollTop = 10000;
     pimgsrc.value = data.img_src;
     pname.value = data.name;
     pabout.value = data.command;
     pprice.value = data.price;
     pamount.value = data.amount;
     psael.value = data.sale;
+    ppcatacory.value = data.catacory;
 
     editform.addEventListener("submit", function () {
       let editobj = {
@@ -149,6 +153,7 @@ function creElement(data) {
         price: pprice.value,
         amount: pamount.value,
         command: pabout.value,
+        catacory: ppcatacory.value,
       };
       putfetch(editobj);
     });

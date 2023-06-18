@@ -23,7 +23,7 @@ async function myfetch1() {
   });
 
   $(".autoplay").slick({
-    dots: true,
+    dots: false,
     slidesToShow: 4,
     slidesToScroll: 1,
     infinite: true,
@@ -61,14 +61,16 @@ async function myfetch1() {
           slidesToShow: 1,
           slidesToScroll: 1,
           dots: false,
+          infinite: true,
         },
       },
       {
         breakpoint: 340,
         settings: {
           slidesToShow: 1,
-          slidesToScroll: 0.5,
+          slidesToScroll: 1,
           dots: false,
+          infinite: true,
         },
       },
       // You can unslick at a given breakpoint now by adding:
@@ -137,6 +139,21 @@ function cretElement(data) {
     localStorage.setItem("wishlist", JSON.stringify(wishlist_arr));
     wishlist_leng.innerHTML = wishlist_arr.length;
   });
+
+  //catacory ucun
+
+  if (data.catacory === "hous") {
+    carddiv.classList.add("house");
+  }
+  if (data.catacory === "woman") {
+    carddiv.classList.add("woman");
+  }
+  if (data.catacory === "man") {
+    carddiv.classList.add("man");
+  }
+  if (data.catacory === "child") {
+    carddiv.classList.add("child");
+  }
 
   const myp = document.createElement("p");
   myp.innerText = "";
@@ -292,3 +309,48 @@ myfetch1();
 //   // // loginfetch();
 
 // }
+
+const man_btn = document.querySelector(".man_btn");
+const woman_btn = document.querySelector(".woman_btn");
+const child_btn = document.querySelector(".child_btn");
+const hous_btn = document.querySelector(".hous_btn");
+const showall = document.querySelector(".showall");
+//filter ucun
+
+man_btn.addEventListener("click", function () {
+  document.querySelectorAll(".card").forEach((element) => {
+    element.style.display = "none";
+  });
+  document.querySelectorAll(".man").forEach((element) => {
+    element.style.display = "block";
+  });
+});
+woman_btn.addEventListener("click", function () {
+  document.querySelectorAll(".card").forEach((element) => {
+    element.style.display = "none";
+  });
+  document.querySelectorAll(".woman").forEach((element) => {
+    element.style.display = "block";
+  });
+});
+child_btn.addEventListener("click", function () {
+  document.querySelectorAll(".card").forEach((element) => {
+    element.style.display = "none";
+  });
+  document.querySelectorAll(".child").forEach((element) => {
+    element.style.display = "block";
+  });
+});
+showall.addEventListener("click", function () {
+  document.querySelectorAll(".card").forEach((element) => {
+    element.style.display = "block";
+  });
+});
+hous_btn.addEventListener("click", function () {
+  document.querySelectorAll(".card").forEach((element) => {
+    element.style.display = "none";
+  });
+  document.querySelectorAll(".house").forEach((element) => {
+    element.style.display = "block";
+  });
+});
