@@ -1,9 +1,111 @@
+const mycards = document.querySelector(".mycards");
+const autoplay = document.querySelector(".autoplay");
+
 //animation
+
 const Discover = document.querySelector(".Discover");
+const easily = document.querySelectorAll(".easily");
+const myroom1 = document.querySelector(".myroom1");
+const myroom2 = document.querySelector(".myroom2");
+const myroom3 = document.querySelector(".myroom3");
+
 window.addEventListener("scroll", function () {
   let scrollPosition = window.scrollY;
   Discover.style.backgroundPositionX = -scrollPosition + "px";
 });
+
+function scroll_animate() {
+  let myscrol = window.scrollY;
+
+  if (myscrol > 200) {
+    easily.forEach((element) => {
+      element.style.cssText = `
+    opacity:1;
+    top:50%;
+
+    `;
+    });
+  } else {
+    easily.forEach((element) => {
+      element.style.cssText = `
+    opacity:0;
+    top:55%;
+
+    `;
+    });
+  }
+  if (myscrol > 700) {
+    easily.forEach((element) => {
+      element.style.cssText = `
+    opacity:0;
+    top:55%;
+    `;
+    });
+  }
+  if (myscrol > 500) {
+    myroom1.style.cssText = `
+    opacity:1;  
+    transition: 0.5s;
+
+    `;
+    myroom2.style.cssText = `
+    opacity:1;  
+    transition: 1.5s;
+
+    `;
+    myroom3.style.cssText = `
+    opacity:1;  
+    transition: 2s;
+    `;
+  } else {
+    myroom1.style.cssText = `
+  opacity:0;  
+  transition: 2s;
+
+  `;
+    myroom2.style.cssText = `
+  opacity:0;
+  transition: 1.5s;
+
+  `;
+    myroom3.style.cssText = `
+  opacity:0;  
+  transition: 0.5s;
+
+  `;
+  }
+  if (myscrol > 1400) {
+    myroom1.style.cssText = `
+    opacity:0; 
+  transition: 2s;
+
+    `;
+    myroom2.style.cssText = `
+    opacity:0;  
+  transition: 1s;
+    
+    `;
+    myroom3.style.cssText = `
+    opacity:0;  
+  transition: 0.5s;
+
+    `;
+  }
+  if (myscrol > 1000) {
+    mycards.style.cssText = `
+    opacity: 1;
+  transition: 2s;
+
+    
+    `;
+  } else {
+    mycards.style.cssText = `
+    opacity: 0;
+    
+    `;
+  }
+}
+window.addEventListener("scroll", scroll_animate);
 
 // mocapi hissesi
 async function myfetch() {
@@ -79,8 +181,7 @@ async function myfetch1() {
     ],
   });
 }
-const mycards = document.querySelector(".mycards");
-const autoplay = document.querySelector(".autoplay");
+
 const wishlist_leng = document.querySelector(".wishlist_leng");
 const basget_leng = document.querySelector(".basget_leng");
 

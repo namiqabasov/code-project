@@ -41,6 +41,7 @@ const myinput = document.querySelector(".myinput");
 const inputremov = document.querySelector(".inputremov");
 Searchi.addEventListener("click", function () {
   myinput.classList.add("activinput");
+  imputFetch();
 });
 inputremov.addEventListener("click", function () {
   myinput.classList.remove("activinput");
@@ -97,10 +98,9 @@ function inputCReate(element) {
 }
 
 const position = document.querySelector(".position");
-
 searchinput.addEventListener("keyup", function () {
-  imputFetch();
   input_item.innerHTML = "";
+  imputFetch();
 });
 
 //login ucun
