@@ -60,6 +60,74 @@ nav .mycontainer ul {
 nav .mycontainer ul .remove {
   display: none;
 }
+@media screen and (min-width: 900px) {
+  nav .mycontainer ul .home_li {
+    position: relative;
+  }
+  nav .mycontainer ul .home_li .home_ul {
+    position: absolute;
+    background-color: white;
+    opacity: 0;
+    padding: 10px;
+    top: 30px;
+    left: -50px;
+    transition: 0.4s;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    z-index: 3;
+    width: 200px;
+    height: 0;
+    border-radius: 10px;
+  }
+  nav .mycontainer ul .home_li .home_ul li {
+    display: none;
+  }
+  nav .mycontainer ul .home_li:hover .home_ul {
+    top: 20px;
+    opacity: 1;
+    height: auto;
+  }
+  nav .mycontainer ul .home_li:hover .home_ul li {
+    display: block;
+  }
+  nav .mycontainer ul .blog_li {
+    position: relative;
+  }
+  nav .mycontainer ul .blog_li .blog_ul {
+    position: absolute;
+    background-color: white;
+    opacity: 0;
+    padding: 10px;
+    top: 30px;
+    left: -50px;
+    transition: 0.4s;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    z-index: 3;
+    width: 200px;
+    height: 0;
+    border-radius: 10px;
+  }
+  nav .mycontainer ul .blog_li .blog_ul li {
+    display: none;
+  }
+  nav .mycontainer ul .blog_li:hover .blog_ul {
+    top: 20px;
+    opacity: 1;
+    height: auto;
+  }
+  nav .mycontainer ul .blog_li:hover .blog_ul li {
+    display: block;
+  }
+}
+nav .mycontainer ul .li_div {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
 nav .mycontainer .icons {
   display: flex;
   gap: 10px;
@@ -234,9 +302,98 @@ nav .mycontainer .bars {
     opacity: 0;
     width: 0;
     transition: 0.5s;
+    overflow: auto;
   }
   nav .mycontainer ul li {
     display: none;
+  }
+  nav .mycontainer ul .home_li ul {
+    position: absolute;
+    opacity: 1;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    left: 0;
+    top: 80px;
+    background-color: white;
+    gap: 0;
+    height: 0;
+  }
+  nav .mycontainer ul .home_li ul li {
+    display: none;
+    margin: 0;
+    padding: 0;
+    width: 200px;
+    margin-left: 5px;
+    padding: 10px;
+  }
+  nav .mycontainer ul .home_li ul li a {
+    color: rgb(18, 18, 18);
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+  nav .mycontainer ul .home_li ul li:hover {
+    width: 200px;
+  }
+  nav .mycontainer ul .home_li:hover {
+    background-color: white;
+    color: black;
+  }
+  nav .mycontainer ul .blog_li ul {
+    position: absolute;
+    opacity: 1;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    left: -10px;
+    top: 80px;
+    background-color: white;
+    gap: 0;
+    height: 0;
+  }
+  nav .mycontainer ul .blog_li ul li {
+    display: none;
+    margin: 0;
+    padding: 0;
+    width: 200px;
+    margin-left: 5px;
+    padding: 10px;
+  }
+  nav .mycontainer ul .blog_li ul li a {
+    color: rgb(18, 18, 18);
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+  nav .mycontainer ul .blog_li ul li:hover {
+    width: 200px;
+  }
+  nav .mycontainer ul .blog_li:hover {
+    background-color: white;
+    color: black;
+  }
+  nav .mycontainer ul .active_home_li {
+    margin-bottom: 200px;
+  }
+  nav .mycontainer ul .active_home_li ul {
+    height: auto;
+    padding: 20px 0;
+  }
+  nav .mycontainer ul .active_home_li ul li {
+    display: block;
+  }
+  nav .mycontainer ul .active_blog_li {
+    margin-bottom: 150px;
+  }
+  nav .mycontainer ul .active_blog_li ul {
+    height: auto;
+    padding: 20px 0;
+  }
+  nav .mycontainer ul .active_blog_li ul li {
+    display: block;
   }
   nav .mycontainer .activebar {
     z-index: 4;
@@ -270,7 +427,7 @@ nav .mycontainer .bars {
   nav .mycontainer .activebar li a {
     font-size: 24px;
     transition: 0.9;
-    color: rgba(255, 255, 255, 0.745);
+    color: rgb(255, 255, 255);
     transition: 0.4s;
     padding: 10px;
   }
@@ -278,8 +435,22 @@ nav .mycontainer .bars {
     background-color: rgba(0, 217, 255, 0.507);
     width: 150px;
   }
-  nav .mycontainer .activebar li:hover a {
-    color: rgb(255, 255, 255);
+  nav .mycontainer .activebar .blog_icon {
+    position: absolute;
+    color: white;
+    left: 75px;
+    top: 20px;
+    transition: 1s;
+  }
+  nav .mycontainer .activebar .hom_icon {
+    position: absolute;
+    color: white;
+    left: 100px;
+    top: 30px;
+    transition: 1s;
+  }
+  nav .mycontainer .activebar .transform_icon {
+    transform: rotateZ(-90deg);
   }
   nav .mycontainer .bars {
     display: flex;
@@ -371,6 +542,7 @@ main .fade {
 }
 main .fade .slidecard {
   width: 100%;
+  height: 50vw;
   display: flex;
   position: relative;
 }
@@ -406,15 +578,15 @@ main .fade .slidecard .easily p {
 }
 main .fade .slidecard .easily button {
   padding: 15px 30px;
-  border: 1px solid white;
-  background-color: white;
-  color: black;
+  border: 1px solid red;
+  background-color: rgb(255, 25, 0);
+  color: rgb(255, 255, 255);
   border-radius: 20px;
   transition: 0.4s;
 }
 main .fade .slidecard .easily button:hover {
-  background-color: rgba(226, 92, 92, 0);
-  color: rgb(255, 251, 251);
+  background-color: rgba(255, 255, 255, 0.732);
+  color: rgb(0, 0, 0);
   transform: rotateY(5deg);
   border: 1px solid;
 }
@@ -425,6 +597,56 @@ main .fade .slidecard .easily button:hover {
   main .fade .slidecard .easily button {
     padding: 3vw 6vw;
   }
+}
+main .fade .men_img {
+  position: relative;
+}
+main .fade .men_img img {
+  width: 40%;
+  position: absolute;
+  right: 0;
+  transition: 0.4s;
+}
+main .fade .men_img .easily {
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: start;
+  opacity: 0;
+  transition: 0.5s;
+}
+main .fade .men_img .easily h2 {
+  color: brown;
+  font-size: 2vw;
+  font-weight: bold;
+}
+main .fade .men_img .easily h1 {
+  font-size: 8vw;
+  font-weight: bold;
+}
+main .fade .men_img .easily p {
+  font-size: 1.5vw;
+  color: brown;
+  max-width: 500px;
+  font-weight: bold;
+}
+main .fade .men_img .easily button {
+  padding: 15px 30px;
+  border: 1px solid red;
+  background-color: rgb(255, 25, 0);
+  color: rgb(255, 255, 255);
+  border-radius: 20px;
+  transition: 0.4s;
+}
+main .fade .men_img .easily button:hover {
+  background-color: rgba(255, 255, 255, 0.732);
+  color: rgb(0, 0, 0);
+  transform: rotateY(5deg);
+  border: 1px solid;
 }
 main .fade .slick-prev {
   left: 20px;
@@ -484,6 +706,8 @@ main .rooms .mycontainer {
 main .rooms .mycontainer .myroom {
   max-width: 350px;
   width: 100%;
+  height: 200px;
+  overflow: hidden;
   position: relative;
   display: flex;
   justify-content: center;
@@ -492,14 +716,18 @@ main .rooms .mycontainer .myroom {
 }
 main .rooms .mycontainer .myroom img {
   width: 100%;
-  height: 200px;
+  height: auto;
 }
 main .rooms .mycontainer .myroom .name {
   position: absolute;
+  background-color: rgba(78, 76, 76, 0.303);
+  padding: 100%;
 }
 main .rooms .mycontainer .myroom .name p {
-  color: white;
   font-size: 200%;
+}
+main .rooms .mycontainer .myroom .name p a {
+  color: white;
 }
 @media screen and (max-width: 768px) {
   main .rooms .mycontainer {
@@ -553,6 +781,7 @@ main .product .mycontainer .mycards {
 main .product .mycontainer .mycards .card {
   width: 300px;
   box-shadow: 10px 8px rgba(0, 0, 0, 0.05), 8px 6px rgba(0, 0, 0, 0.075), 5px 4px rgba(0, 0, 0, 0.1);
+  background-color: rgba(228, 230, 229, 0.122);
 }
 main .product .mycontainer .mycards .card .img {
   position: relative;
@@ -576,6 +805,8 @@ main .product .mycontainer .mycards .card .img img {
   width: 100%;
   height: auto;
   transition: 0.4s;
+  position: relative;
+  top: -30px;
 }
 main .product .mycontainer .mycards .card .img:hover img {
   transform: scale(1.2);
@@ -2442,6 +2673,11 @@ main .mycontainer .Wishlistcard .shop .ptag h2 {
   margin: 100px auto;
   box-shadow: 5px 10px rgba(0, 0, 0, 0.19);
 }
+.login .login_worng {
+  font-size: 14px;
+  color: red;
+  padding: 10px 0;
+}
 .login h1 {
   text-align: center;
   font-weight: bold;
@@ -2512,6 +2748,7 @@ main .mycontainer .Wishlistcard .shop .ptag h2 {
   padding: 10px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   flex-wrap: wrap;
   gap: 20px;
   position: fixed;
@@ -2550,6 +2787,17 @@ main .mycontainer .Wishlistcard .shop .ptag h2 {
   max-width: 200px;
   width: 100%;
   border: 0;
+}
+.myadmin .mylogo .icon_div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+@media screen and (max-width: 280px) {
+  .myadmin .mylogo .myicon {
+    display: none;
+  }
 }
 .myadmin .admin_bar {
   display: flex;
@@ -2618,7 +2866,7 @@ main .mycontainer .Wishlistcard .shop .ptag h2 {
     font-size: 3px;
   }
 }
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 500px) {
   .myadmin .admin_bar ul {
     padding: 50% 0;
   }
@@ -2821,6 +3069,18 @@ main .mycontainer .Wishlistcard .shop .ptag h2 {
     width: 20vw;
   }
 }
+.myadmin .admin_registr {
+  background: none;
+  border: 0;
+}
+.myadmin .admin_registr i {
+  color: rgb(64, 65, 64);
+  background-color: #a1bf0a;
+  border-radius: 10px;
+  font-size: 24px;
+  padding: 5px 10px;
+  margin-top: 10px;
+}
 
 .admin_start .adminlogin {
   padding: 100px 20px;
@@ -2851,6 +3111,11 @@ main .mycontainer .Wishlistcard .shop .ptag h2 {
   padding: 10px 15px;
   border-radius: 3px;
   border: 1px solid rgba(63, 61, 61, 0.359);
+}
+.admin_start .adminlogin .worng {
+  color: red;
+  font-size: 14px;
+  padding: 10px 0;
 }
 .admin_start .adminlogin button {
   padding: 15px 30px;
@@ -3185,4 +3450,61 @@ main .elements-section .element input[type=text] {
 main .elements-section .element img {
   max-width: 100%;
   height: auto;
+}
+
+.admin_register {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin: 200px auto;
+  border: 1px solid black;
+  max-width: 400px;
+  padding: 100px;
+  padding: 100px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid rgba(0, 0, 0, 0.275);
+  max-width: 500px;
+  margin: 100px auto;
+  box-shadow: 5px 10px rgba(0, 0, 0, 0.19);
+}
+.admin_register .adminregistr_worng {
+  font-size: 14px;
+  color: red;
+  padding: 10px 0;
+}
+.admin_register h1 {
+  text-align: center;
+  font-weight: bold;
+  font-size: 32px;
+  padding-bottom: 100px;
+}
+@media screen and (max-width: 300px) {
+  .admin_register h1 {
+    font-size: 18px;
+  }
+}
+.admin_register input {
+  max-width: 300px;
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 10px 15px;
+  border-radius: 3px;
+  border: 1px solid rgba(63, 61, 61, 0.359);
+}
+.admin_register button {
+  padding: 15px 30px;
+  border: 0;
+  background-color: rgb(71, 38, 38);
+  font-size: 18px;
+  color: rgb(179, 175, 175);
+  font-weight: bold;
+  transition: 0.4s;
+  border-radius: 10px;
+}
+.admin_register button:hover {
+  background-color: rgba(72, 13, 13, 0.804);
+  color: white;
 }/*# sourceMappingURL=main.css.map */

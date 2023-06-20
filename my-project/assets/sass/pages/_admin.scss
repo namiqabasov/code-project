@@ -15,6 +15,7 @@
         padding: 10px;
         display: flex;
         justify-content: space-between;
+        align-items: center;
         flex-wrap: wrap;
         gap: 20px;
         position: fixed;
@@ -59,6 +60,19 @@
                 max-width: 200px;
                 width: 100%;
                 border: 0;
+            }
+        }
+
+        .icon_div {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 10px;
+        }
+
+        @media screen and (max-width:280px) {
+            .myicon {
+                display: none;
             }
         }
     }
@@ -147,7 +161,7 @@
             }
         }
 
-        @media screen and (max-width:450px) {
+        @media screen and (max-width:500px) {
             ul {
                 padding: 50% 0;
             }
@@ -415,6 +429,20 @@
 
 
     }
+
+    .admin_registr {
+        background: none;
+        border: 0;
+
+        i {
+            color: rgb(64, 65, 64);
+            background-color: #a1bf0a;
+            border-radius: 10px;
+            font-size: 24px;
+            padding: 5px 10px;
+            margin-top: 10px;
+        }
+    }
 }
 
 .admin_start {
@@ -449,6 +477,12 @@
             padding: 10px 15px;
             border-radius: 3px;
             border: 1px solid rgba(63, 61, 61, 0.359);
+        }
+
+        .worng {
+            color: red;
+            font-size: 14px;
+            padding: 10px 0;
         }
 
         button {

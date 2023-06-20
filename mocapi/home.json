@@ -104,7 +104,7 @@
       "id": 11,
       "amount": 100,
       "catacory": "hous",
-      "img_src": "https://a6e8z9v6.stackpathcdn.com/kleanity/wp-content/uploads/2016/08/brown-notebook.jpg",
+      "img_src": "https://themes.laborator.co/aurum/fashion/wp-content/uploads/2014/11/sle-235x300.jpg",
       "name": "Modern Bed",
       "sale": "SALE!",
       "price": 830,
@@ -328,6 +328,13 @@
       "mail": "NamiqAbasov@gmail.com",
       "password": "12345",
       "id": 3
+    }
+  ],
+  "admin": [
+    {
+      "id": 1,
+      "name": "namiq",
+      "password": "12345"
     }
   ]
 }
