@@ -2464,6 +2464,18 @@ main .mycard .mycontainer .myimg {
 main .mycard .mycontainer .myimg img {
   width: 100%;
 }
+main .mycard .mycontainer .image-container {
+  position: relative;
+  overflow: hidden;
+}
+main .mycard .mycontainer .zoom-image {
+  transition: transform 0.3s;
+  cursor: zoom-in;
+}
+main .mycard .mycontainer .zoom-image:hover {
+  transform: scale(1.2);
+  /* Increase the scale value to zoom in more */
+}
 main .mycard .mycontainer .about {
   width: 50%;
   display: flex;

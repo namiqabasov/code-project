@@ -13,6 +13,22 @@ main {
                 }
             }
 
+            .image-container {
+                position: relative;
+                overflow: hidden;
+            }
+
+            .zoom-image {
+                transition: transform 0.3s;
+                cursor: zoom-in;
+            }
+
+            .zoom-image:hover {
+                transform: scale(1.2);
+                /* Increase the scale value to zoom in more */
+            }
+
+
             .about {
                 width: 50%;
                 display: flex;
